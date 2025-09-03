@@ -1,145 +1,121 @@
 ---
-title: 'Home'
+title: 'RespiraFibre'
 date: 2023-10-24
 type: landing
 
 design:
-  # Default section spacing
   spacing: "6rem"
 
 sections:
   - block: hero
     content:
-      title: Build Your Landing Pages with Hugo Blox
-      text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
+      title: "RespiraFibre: Measuring Every Breath, Saving Lives"
+      text: |
+        We transform everyday oxygen masks and cannulae into life-saving sensors — enabling continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
       primary_action:
-        text: Get Started
-        url: https://hugoblox.com/templates/
-        icon: rocket-launch
+        text: Learn More
+        url: "#solution"
+        icon: stethoscope
       secondary_action:
-        text: Read the docs
-        url: https://docs.hugoblox.com
+        text: Contact Us
+        url: "/contact"
       announcement:
-        text: "Announcing the release of version 1."
+        text: "Patent-filed breakthrough in respiratory monitoring"
         link:
           text: "Read more"
-          url: "/blog/"
+          url: "/about"
     design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
-      # For full-screen, add `min-h-screen` below
       css_class: "dark"
       background:
         color: "navy"
         image:
-          # Add your image background to `assets/media/`.
           filename: bg-triangles.svg
           filters:
             brightness: 0.5
           size: cover
           position: center
-          parallax: false
+
   - block: stats
     content:
       items:
-        - statistic: "1M+"
+        - statistic: "218M+"
           description: |
-            Websites built  
-            with Hugo Blox
-        - statistic: "10k+"
+            Patients receive oxygen  
+            therapy worldwide each year
+        - statistic: "7,964"
           description: |
-            GitHub stars  
-            since 2016
-        - statistic: "3k+"
+            UK deaths annually from  
+            missed patient deterioration
+        - statistic: "£1.2B"
           description: |
-            Discord community  
-            for support
+            Potential NHS annual savings  
+            from adoption
     design:
-      # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
-      # Reduce spacing
       spacing:
         padding: ["1rem", 0, "1rem", 0]
+
   - block: features
-    id: features
+    id: solution
     content:
-      title: Features
-      text: Build your site with blocks 🧱
+      title: "Our Solution"
+      text: "Ultra-sensitive nanotechnology fibres embedded into oxygen-delivery devices for accurate, continuous respiratory monitoring."
       items:
-        - name: Optimized SEO
-          icon: magnifying-glass
-          description: Automatic sitemaps, RSS feeds, and rich metadata take the pain out of SEO and syndication.
-        - name: Fast
-          icon: bolt
-          description: Super fast page load with Tailwind CSS and super fast site building with Hugo.
-        - name: Easy
-          icon: sparkles
-          description: One-click deployment to GitHub Pages. Have your new website live within 5 minutes!
-        - name: No-Code
-          icon: code-bracket
-          description: Edit and design your site just using rich text (Markdown) and configurable YAML parameters.
-        - name: Highly Rated
-          icon: star
-          description: Rated 5-stars by the community.
-        - name: Swappable Blocks
-          icon: rectangle-group
-          description: Build your pages with blocks - no coding required!
+        - name: Imperceptible Sensors
+          icon: activity
+          description: |
+            Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption.
+        - name: Real-Time Data
+          icon: wifi
+          description: |
+            A lightweight reusable node wirelessly transmits high-fidelity breathing data to secure hospital systems (e.g. EPIC).
+        - name: AI-Powered Insights
+          icon: brain
+          description: |
+            Enables earlier detection of deterioration, with future expansion to classify cough, speech, and shortness of breath.
+        - name: Sustainable Design
+          icon: leaf
+          description: |
+            Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
+
   - block: cta-image-paragraph
-    id: solutions
+    id: impact
     content:
       items:
-        - title: Build your future-proof website
-          text: As easy as 1, 2, 3!
+        - title: "Impact"
+          text: |
+            One-third of inpatients deteriorate during hospitalisation. RespiraFibre enables earlier recognition and intervention, reducing ICU admissions, cardiac arrests, deaths — and helping clinicians deliver safer care.
           feature_icon: check
           features:
-            - "Future-proof - edit your content in text files"
-            - "Website is generated by a single app, Hugo"
-            - "No JavaScript knowledge required"
-          # Upload image to `assets/media/` and reference the filename here
-          image: build-website.png
+            - Save lives by catching deterioration earlier
+            - Reduce ICU admissions and free bed space
+            - Lower stress and workload for frontline staff
+          image: breathing-monitor.png
           button:
-            text: Get Started
-            url: https://hugoblox.com/templates/
-        - title: Large Community
-          text: Join our large community on Discord - ask questions and get live responses
-          feature_icon: bolt
-          features:
-            - "Dedicated support channel"
-            - "3,000+ users on Discord"
-            - "Share your site and get feedback"
-          # Upload image to `assets/media/` and reference the filename here
-          image: coffee.jpg
-          button:
-            text: Join Discord
-            url: https://discord.gg/z8wNYzb
-    design:
-      # Section background color (CSS class)
-      css_class: "bg-gray-100 dark:bg-gray-900"
+            text: Learn About Our Technology
+            url: "/technology"
+
   - block: testimonials
     content:
-      title: ""
-      text: ""
+      title: "What Clinicians Say"
       items:
-        - name: "Hugo Smith"
-          role: "Marketing Executive at X"
-          # Upload image to `assets/media/` and reference the filename here
+        - name: "Dr Jane Smith"
+          role: "Critical Care Consultant, UCLH"
           image: "testimonial-1.jpg"
-          text: "Awesome, so easy to use and saved me so much work with the swappable pre-designed sections!"
+          text: "RespiraFibre has the potential to close a huge safety gap in hospitals by making continuous, accurate breathing monitoring standard practice."
     design:
       spacing:
-        # Reduce bottom spacing so the testimonial appears vertically centered between sections
         padding: ["6rem", 0, 0, 0]
+
   - block: cta-card
     content:
-      title: Build your future-proof website
-      text: As easy as 1, 2, 3!
+      title: "Join Us in Transforming Respiratory Care"
+      text: |
+        RespiraFibre is redefining patient monitoring — improving outcomes, supporting clinicians, and enabling a new era of digital health.
       button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+        text: Get Involved
+        url: "/contact"
     design:
       card:
-        # Card background color (CSS class)
         css_class: "bg-primary-700"
-        css_style: ""
 ---
