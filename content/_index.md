@@ -62,7 +62,7 @@ sections:
       text: "Ultra-sensitive nanotechnology fibres embedded into oxygen-delivery devices for accurate, continuous respiratory monitoring."
       items:
         - name: Imperceptible Sensors
-          icon: activity
+          icon: heart
           description: |
             Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption.
         - name: Real-Time Data
@@ -70,11 +70,11 @@ sections:
           description: |
             A lightweight reusable node wirelessly transmits high-fidelity breathing data to secure hospital systems (e.g. EPIC).
         - name: AI-Powered Insights
-          icon: brain
+          icon: sparkles
           description: |
             Enables earlier detection of deterioration, with future expansion to classify cough, speech, and shortness of breath.
         - name: Sustainable Design
-          icon: leaf
+          icon: bolt
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
 
@@ -90,7 +90,7 @@ sections:
             - Save lives by catching deterioration earlier
             - Reduce ICU admissions and free bed space
             - Lower stress and workload for frontline staff
-          image: breathing-monitor.png
+          image: build-website.png   # <-- this exists in demo
           button:
             text: Learn About Our Technology
             url: "/technology"
