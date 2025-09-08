@@ -29,7 +29,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: bg-triangles.svg
+          filename: LandingPage_Layla.png
           filters:
             brightness: 0.5
           size: cover
