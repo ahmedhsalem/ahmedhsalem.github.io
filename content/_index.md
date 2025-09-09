@@ -99,10 +99,10 @@ sections:
     content:
       title: "What Clinicians Say"
       items:
-        - name: "Dr Jane Smith"
-          role: "Critical Care Consultant, UCLH"
-          image: "testimonial-1.jpg"
-          text: "RespiraFibre has the potential to close a huge safety gap in hospitals by making continuous, accurate breathing monitoring standard practice."
+        - name: "Prof. Ramani Moonesinghe"
+          role: "NHS England Interim Director of Patient Safety"
+          image: "RamaniMoonesinghe.jpg"
+          text: "A valid, reliable and autonomous source of respiratory rate data would be enormously valuable"
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
