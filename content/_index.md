@@ -11,7 +11,7 @@ sections:
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
       text: |
-        We transform everyday oxygen masks and cannulae into life-saving sensors — enabling continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
+        Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — enabling continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
       primary_action:
         text: Learn More
         url: "#solution"
