@@ -97,7 +97,7 @@ sections:
 
   - block: testimonials
     content:
-      title: "What Clinicians Say"
+      title: "What Clinicians Say:"
       items:
         - name: "Prof. Ramani Moonesinghe"
           role: "NHS England Interim Director of Patient Safety"
