@@ -29,7 +29,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: SolutionPage_Image_v4.png
+          filename: WebsitePage_Image.png
           filters:
             brightness: 0.5
           size: cover
