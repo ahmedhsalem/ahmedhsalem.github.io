@@ -29,7 +29,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: LandingPage_Layla.png
+          filename: SolutionPage_Image_v4.png
           filters:
             brightness: 0.5
           size: cover
