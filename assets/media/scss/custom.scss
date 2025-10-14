@@ -1,23 +1,7 @@
-.rf-hero-compact {
-  background-size: cover;
-  background-position: center;
-}
+.only-desktop { display: block; }
+.only-mobile  { display: none; }
 
-/* Phones & small tablets */
 @media (max-width: 820px) {
-  /* 1) Force our mobile image even if the theme sets bg on a child or inline */
-  .rf-hero-compact,
-  .rf-hero-compact [style*="background-image"],
-  .rf-hero-compact .section-bg,
-  .rf-hero-compact .bg-cover,
-  .rf-hero-compact .bg-image {
-    background-image: url("/media/WebsitePage_Image_Phone.png?v=2") !important; /* cache-bust */
-    background-size: cover !important;
-    background-position: center top !important;
-  }
-
-  /* 2) Make sure it’s tall enough on iOS Safari */
-  .rf-hero-compact {
-    min-height: 65svh; /* small viewport height avoids iOS URL-bar jumpiness */
-  }
+  .only-desktop { display: none !important; }
+  .only-mobile  { display: block !important; }
 }
