@@ -1,32 +1,37 @@
 # SITE SETUP
 # Guide: https://docs.hugoblox.com/tutorial/
 # Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
+# =======================
 # Appearance
+# =======================
 appearance:
-  mode: light
+  mode: light               # or "system" if you want dark mode auto
   color: indigo
 
-# SEO
+# =======================
+# SEO / Marketing
+# =======================
 marketing:
   seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo landing page theme powered by Hugo Blox website builder.'
-    twitter: 'GetResearchDev'
+    site_type: Organization
+    org_name: "RespiraFibre"
+    local_business_type: ""
+    description: "RespiraFibre turns everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring to detect deterioration earlier."
+    twitter: ""             # your @handle if you have one (no @)
   analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    plausible: ''
-    fathom: ''
-    pirsch: ''
+    google_analytics: ""    # G-XXXXXXXXXX
+    baidu_tongji: ""
+    plausible: ""
+    fathom: ""
+    pirsch: ""
   verification:
-    google: ''
-    baidu: ''
+    google: ""              # Search Console verification
+    baidu: ""
 
-# Site header
+# =======================
+# Header / Navbar
+# =======================
 header:
   navbar:
     enable: true
@@ -34,22 +39,28 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: ""
-      # Logo filename in `assets/media/` folder
-      filename: "logo.svg"
+      text: "RespiraFibre"
+      # File should live at assets/media/RespiraFibrelogo-v2.svg
+      filename: "RespiraFibrelogo-v2.svg"
     button:
       enable: true
-      text: "Get Started"
-      url: "https://hugoblox.com/templates/"
-    show_search: true
-    show_theme_chooser: true
+      text: "Contact Us"
+      url: "/contact/"
+    show_search: false       # turn on later if you add a blog/search
+    show_theme_chooser: false
 
-# Site footer
+# (Nav links live in config/_default/menus.yaml — see below)
+
+# =======================
+# Footer
+# =======================
 footer:
   copyright:
-    notice: '© {year} My Company'
+    notice: "© {year} RespiraFibre. All rights reserved."
 
+# =======================
 # Localization
+# =======================
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: "Jan 2, 2006"
+  time_format: "3:04 PM"
