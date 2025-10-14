@@ -15,7 +15,7 @@ sections:
       primary_action:
         text: Learn More
         url: "#solution"
-        icon: stethoscope
+        icon: heart
       secondary_action:
         text: Contact Us
         url: "/contact"
