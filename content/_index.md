@@ -25,15 +25,15 @@ sections:
           text: "Read more"
           url: "/about"
     design:
-      css_class: "dark"
+      css_class: "dark rf-hero-compact"   # <-- added class for mobile image swap
       background:
         color: "navy"
         image:
           filename: WebsitePage_Image.png
           filters:
             brightness: 0.5
-          size: cover
-          position: center
+        size: cover
+        position: center
 
   - block: stats
     content:
@@ -90,7 +90,7 @@ sections:
             - Save lives by catching deterioration earlier
             - Reduce ICU admissions and free bed space
             - Lower stress and workload for frontline staff
-          image: build-website.png   # <-- this exists in demo
+          image: build-website.png
           button:
             text: Learn About Our Technology
             url: "/technology"
