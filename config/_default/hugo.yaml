@@ -12,7 +12,8 @@ baseURL: "https://www.respirafibre.com/"                     # your live site UR
 languageCode: "en-gb"
 theme: "hugo-blox"                                           # keep as-is if using Hugo Blox
 copyright: "© 2025 RespiraFibre. All rights reserved."
-paginate: 10
+pagination:
+  pagerSize: 10
 
 ############################
 ## PAGE OPTIONS (cascade)
