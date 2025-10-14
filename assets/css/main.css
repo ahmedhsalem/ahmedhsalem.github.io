@@ -1,0 +1,9 @@
+/* assets/css/main.css */
+
+/* These three lines are expected by the Tailwind-based theme */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Load your overrides after Tailwind so they win */
+@import "custom.css";
