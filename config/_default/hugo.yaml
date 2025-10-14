@@ -2,23 +2,15 @@
 # Hugo Configuration
 # Project: RespiraFibre
 # =========================================================
-# Docs:
-# - Hugo Blox tutorial: https://docs.hugoblox.com/tutorial/
-# - Hugo config reference: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# =========================================================
 
 title: "RespiraFibre | Continuous Respiratory Monitoring"
 baseURL: "https://www.respirafibre.com/"
 languageCode: "en-gb"
 copyright: "© 2025 RespiraFibre. All rights reserved."
 
-# ---------------------------------------------------------
-# Hugo Blox module (Tailwind version)
-# ---------------------------------------------------------
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind
-    # Optional plugins (uncomment if needed)
     # - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
     # - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal
 
@@ -128,9 +120,19 @@ markup:
 security:
   enableInlineShortcodes: true
   exec:
-    allow: ["go", "bash"]
+    # Allow Hugo to call required tools in CI:
+    allow:
+      - "go"
+      - "bash"
+      - "git"          # needed for enableGitInfo
+      - "tailwindcss"  # needed by the Tailwind pipeline
+    osEnv:
+      - '(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE)$'
   funcs:
     getenv: ["HUGO_ENV", "WC_ENV"]
+  http:
+    methods: ['(?i)GET|POST']
+    urls: ['.*']
 
 ############################
 ## SITEMAP
