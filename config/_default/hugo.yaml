@@ -10,7 +10,7 @@
 title: "RespiraFibre | Continuous Respiratory Monitoring"   # site title shown in tab/search
 baseURL: "https://www.respirafibre.com/"                     # your live site URL
 languageCode: "en-gb"
-theme: "hugo-blox"                                           # keep as-is if using Hugo Blox
+theme: "github.com/HugoBlox/hugo-blox-builder/modules/blox-theme"                                           # keep as-is if using Hugo Blox
 copyright: "© 2025 RespiraFibre. All rights reserved."
 pagination:
   pagerSize: 10
