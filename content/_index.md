@@ -1,5 +1,5 @@
 ---
-title: 'RespiraFibre'
+title: "RespiraFibre"
 date: 2023-10-24
 type: landing
 
@@ -7,30 +7,35 @@ design:
   spacing: "6rem"
 
 sections:
-- block: hero
-  id: hero-mobile
-  content:
-    title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-    text: |
-      Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — enabling continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
-    primary_action:
-      text: Learn More
-      url: "#solution"
-      icon: heart
-    secondary_action:
-      text: Contact Us
-      url: "/contact"
-  design:
-    css_class: "only-mobile dark"
-    background:
-      image:
-        filename: WebsitePage_Image_Phone.png   # portrait image in assets/media/
-        filters:
-          brightness: 0.5
-      position: top
-      size: cover
+  # ---------------------------
+  # MOBILE HERO (shown on small screens)
+  # ---------------------------
+  - block: hero
+    id: hero-mobile
+    content:
+      title: "RespiraFibre: Measuring Every Breath, Saving Lives"
+      text: |
+        Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — enabling continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
+      primary_action:
+        text: Learn More
+        url: "#solution"
+        icon: heart
+      secondary_action:
+        text: Contact Us
+        url: "/contact"
+    design:
+      css_class: "only-mobile dark"
+      background:
+        image:
+          filename: WebsitePage_Image_Phone.png   # portrait image in assets/media/
+          filters:
+            brightness: 0.5
+        position: top
+        size: cover
 
-
+  # ---------------------------
+  # DESKTOP HERO (hidden on small screens)
+  # ---------------------------
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
@@ -48,15 +53,15 @@ sections:
         link:
           text: "Read more"
           url: "/about"
-  design:
-    css_class: "only-desktop dark"
-    background:
-      image:
-        filename: WebsitePage_Image.png
-        filters:
-          brightness: 0.5
-    position: center
-    size: cover
+    design:
+      css_class: "only-desktop dark"
+      background:
+        image:
+          filename: WebsitePage_Image.png
+          filters:
+            brightness: 0.5
+        position: center
+        size: cover
 
   - block: stats
     content:
