@@ -101,7 +101,7 @@ sections:
       items:
         - name: "Prof. Ramani Moonesinghe"
           role: "NHS England Interim Director of Patient Safety"
-          image: "RamaniMoonesinghe.jpg"
+          image: "RamaniMoonesinghe.jpg.webp"
           text: "A valid, reliable and autonomous source of respiratory rate data would be enormously valuable"
     design:
       spacing:
