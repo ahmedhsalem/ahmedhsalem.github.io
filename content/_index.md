@@ -7,35 +7,7 @@ design:
   spacing: "6rem"
 
 sections:
-  # ---------------------------
-  # MOBILE HERO (shown on small screens)
-  # ---------------------------
-  - block: hero
-    id: hero-mobile
-    content:
-      title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      text: |
-        Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — enabling continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
-      primary_action:
-        text: Learn More
-        url: "#solution"
-        icon: heart
-      secondary_action:
-        text: Contact Us
-        url: "/contact"
-    design:
-      css_class: "only-mobile dark"
-      background:
-        image:
-          filename: WebsitePage_Image_Phone.png   # portrait image in assets/media/
-          filters:
-            brightness: 0.5
-        position: top
-        size: cover
-
-  # ---------------------------
-  # DESKTOP HERO (hidden on small screens)
-  # ---------------------------
+  # Single, safe, mobile-friendly hero
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
@@ -54,14 +26,15 @@ sections:
           text: "Read more"
           url: "/about"
     design:
-      css_class: "only-desktop dark"
+      css_class: "dark"
       background:
+        color: "navy"               # fills any side/top/bottom bands
         image:
           filename: WebsitePage_Image.png
           filters:
             brightness: 0.5
-        position: center
-        size: cover
+        position: top               # show the top of the image first
+        size: contain               # << fit-to-screen: no zoom/cropping
 
   - block: stats
     content:
