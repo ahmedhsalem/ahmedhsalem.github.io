@@ -1,0 +1,8 @@
+.rf-hero-compact { background-size: cover; background-position: center; }
+@media (max-width: 640px) {
+  .rf-hero-compact {
+    background-image: url("/media/WebsitePage_Image_mobile.png");
+    background-position: center top;
+    min-height: 60vh;
+  }
+}
