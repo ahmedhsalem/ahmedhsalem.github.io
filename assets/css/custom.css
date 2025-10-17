@@ -1,5 +1,5 @@
 /* Custom CSS to increase the height of the logo */
 .navbar-brand img {
-  height: 40px !important; /* Increase this value until it looks right */
-  width: auto;
+  height: 100 px !important; /* Increase this value until it looks right */
+  width: 50 px;
 }
