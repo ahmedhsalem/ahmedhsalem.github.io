@@ -10,7 +10,7 @@ sections:
   # ---------------------------
   # MOBILE HERO
   # ---------------------------
-  - block: hero
+  - block: cta-image-paragraph
     id: hero-mobile
     content:
       items:
@@ -21,18 +21,9 @@ sections:
           button:
             text: Learn More
             url: "#solution"
+          image: "WebsitePage_Image_Phone.png"
     design:
       css_class: "only-mobile rf-hero-img"
-      background:
-        image:
-          filename: "WebsitePage_Image_Phone.png"
-          filters:
-            brightness: 0.5
-        position: center
-        size: cover
-      spacing:
-        margin: [0,0,0,0]       # Remove extra white space at top
-        padding: ["1.5rem", 0, "1.5rem", 0]
 
   # ---------------------------
   # DESKTOP HERO
@@ -65,8 +56,6 @@ sections:
             brightness: 0.5
         position: center
         size: cover
-      spacing:
-        margin: [0,0,0,0]   # Remove extra white space at top
       style: |
         /* PAGE-LEVEL OVERRIDE CSS - DO NOT REMOVE */
         .only-desktop { display: block !important; }
@@ -75,6 +64,82 @@ sections:
         @media (max-width: 820px) {
           .only-desktop { display: none !important; }
           .only-mobile  { display: block !important; }
+        }
+
+        /* Mobile hero CTA-image-paragraph adjustments */
+        .only-mobile .item,
+        .only-mobile .cta-image-paragraph .item {
+          position: relative !important;
+          display: block !important;
+          overflow: hidden !important;
+          width: 100% !important;
+          min-height: 50svh !important;
+        }
+
+        .only-mobile .item .media,
+        .only-mobile .item .media img,
+        .only-mobile .media img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+          object-position: center center !important;
+          display: block !important;
+        }
+
+        .only-mobile .item .content,
+        .only-mobile .cta-image-paragraph .content,
+        .only-mobile .media + .content {
+          position: absolute !important;
+          inset: 0 0 0 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          padding: 1rem !important;
+          box-sizing: border-box !important;
+          z-index: 5 !important;
+          text-align: center !important;
+        }
+
+        .only-mobile .item .content::before,
+        .only-mobile .cta-image-paragraph .content::before {
+          content: "" !important;
+          position: absolute !important;
+          inset: 0 !important;
+          background: linear-gradient(180deg, rgba(6,10,26,0.55) 0%, rgba(6,10,26,0.65) 100%) !important;
+          z-index: 4 !important;
+        }
+
+        .only-mobile .item .content > *,
+        .only-mobile .cta-image-paragraph .content > * {
+          position: relative !important;
+          z-index: 6 !important;
+          color: #fff !important;
+        }
+
+        .only-mobile h1, .only-mobile .hero-title, .only-mobile .item .content h1 {
+          font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
+          line-height: 1.15 !important;
+          margin-bottom: .5rem !important;
+        }
+        .only-mobile p, .only-mobile .item .content p {
+          font-size: clamp(.95rem, 3.8vw, 1.05rem) !important;
+          line-height: 1.45 !important;
+          max-width: 46ch !important;
+          margin: 0 auto !important;
+        }
+        .only-mobile .btn, .only-mobile a.btn {
+          margin-top: .85rem !important;
+          min-height: 44px !important;
+          padding: .6rem 1rem !important;
+          font-weight: 600 !important;
+          z-index: 7 !important;
+        }
+
+        @media (min-width: 821px) {
+          .only-desktop.rf-hero-bg {
+            background-size: cover !important;
+            background-position: center !important;
+          }
         }
 
   # ---------------------------
