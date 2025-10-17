@@ -1,14 +1,22 @@
-/* Stats block numbers */
-section.block-stats h6.text-4xl,
-section.block-stats h6.lg\:text-5xl,
-section.block-stats h6.xl\:text-6xl {
-    font-size: 1.2rem !important;
+/* Target numbers in stats block */
+section.block-stats h6 {
+    font-size: 1.5rem !important;   /* adjust as needed */
     line-height: 1.2 !important;
 }
 
-/* Stats block description */
-section.block-stats p.text-sm,
-section.block-stats p.lg\:text-base {
-    font-size: 0.85rem !important;
+/* Target descriptions in stats block */
+section.block-stats p {
+    font-size: 0.85rem !important;  /* adjust as needed */
     line-height: 1.1 !important;
+    margin-top: 0.25rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+    section.block-stats h6 {
+        font-size: 1.2rem !important;
+    }
+    section.block-stats p {
+        font-size: 0.75rem !important;
+    }
 }
