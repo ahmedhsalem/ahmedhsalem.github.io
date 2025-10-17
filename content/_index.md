@@ -34,8 +34,6 @@ sections:
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      # FIX: Using '>-' and placing text immediately after </style> to fix formatting,
-      # with only the essential visibility CSS inside the style block.
       text: >-
         <style>
         /* Strong page-level override to ensure mobile/desktop visibility */
@@ -131,9 +129,7 @@ sections:
             - Reduce ICU admissions and free bed space
             - Lower stress and workload for frontline staff
           image: build-website.png
-          button:
-            text: Learn About Our Technology
-            url: "/technology"
+
 
   - block: testimonials
     content:
