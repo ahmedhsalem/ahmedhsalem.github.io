@@ -8,7 +8,7 @@ design:
 
 sections:
   # ---------------------------
-  # MOBILE: image-based block (shows full image on phones) 
+  # MOBILE: image-based block (shows full image on phones)
   # ---------------------------
   - block: cta-image-paragraph
     id: hero-mobile
@@ -21,12 +21,13 @@ sections:
           button:
             text: Learn More
             url: "#solution"
-      # Use the portrait/mobile image file here:
-      image: WebsitePage_Image_Phone.png
+          # <-- image belongs here, inside the item:
+          image: "WebsitePage_Image_Phone.png"
     design:
       css_class: "only-mobile rf-hero-img"
       spacing:
         padding: ["1.5rem", 0, "1.5rem", 0]
+
       # layout may be left/right on wider screens, but we hide on desktop anyway
 
   # ---------------------------
