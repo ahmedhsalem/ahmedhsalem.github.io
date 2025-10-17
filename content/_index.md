@@ -63,11 +63,6 @@ sections:
       secondary_action:
         text: Contact Us
         url: "/contact"
-      announcement:
-        text: "Patent-filed breakthrough in respiratory monitoring"
-        link:
-          text: "Read more"
-          url: "/about"
     design:
       # ESSENTIAL CLASS KEPT for desktop visibility
       css_class: "only-desktop dark rf-hero-bg"
