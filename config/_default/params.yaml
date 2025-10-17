@@ -48,7 +48,7 @@ header:
     logo:
       filename: "RespiraFibreLogo_Website.svg"
     button:
-      enable: true
+      enable: false
       text: "Contact Us"
       url: "/contact/"
     show_search: false      # turn on later if you add a blog/search
