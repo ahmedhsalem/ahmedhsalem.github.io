@@ -7,7 +7,31 @@ design:
   spacing: "6rem"
 
 sections:
-  # Single, safe, mobile-friendly hero
+  # ---------------------------
+  # MOBILE: image-based block (shows full image on phones)
+  # ---------------------------
+  - block: cta-image-paragraph
+    id: hero-mobile
+    content:
+      items:
+        - title: "RespiraFibre: Measuring Every Breath, Saving Lives"
+          text: |
+            Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of deterioration.
+          feature_icon: stethoscope
+          button:
+            text: Learn More
+            url: "#solution"
+      # Use the portrait/mobile image file here:
+      image: WebsitePage_Image_Phone.png
+    design:
+      css_class: "only-mobile rf-hero-img"
+      spacing:
+        padding: ["1.5rem", 0, "1.5rem", 0]
+      # layout may be left/right on wider screens, but we hide on desktop anyway
+
+  # ---------------------------
+  # DESKTOP: background hero (keeps the original look on wide screens)
+  # ---------------------------
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
@@ -26,15 +50,15 @@ sections:
           text: "Read more"
           url: "/about"
     design:
-      css_class: "dark"
+      css_class: "only-desktop dark rf-hero-bg"
       background:
-        color: "navy"               # fills any side/top/bottom bands
+        color: "navy"
         image:
           filename: WebsitePage_Image.png
           filters:
             brightness: 0.5
-        position: top               # show the top of the image first
-        size: contain               # << fit-to-screen: no zoom/cropping
+        position: center
+        size: cover
 
   - block: stats
     content:
