@@ -8,7 +8,7 @@ design:
 
 sections:
   # ---------------------------
-  # MOBILE: image-based block (shows full image on phones)
+  # MOBILE: image-based block (shows full image on phones) 
   # ---------------------------
   - block: cta-image-paragraph
     id: hero-mobile
