@@ -8,10 +8,6 @@
 appearance:
   mode: light              # or "system" if you want dark mode auto
   color: indigo
-  # --- CUSTOM CSS INCLUSION ---
-  css:
-    custom:
-      - css/custom.css
   # ----------------------------
 
 # =======================
