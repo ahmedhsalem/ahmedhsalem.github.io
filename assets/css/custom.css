@@ -1,57 +1,41 @@
 /* ========================
-   Header / Logo Scaling
-   ======================== */
-
-/* Logo scaling */
-header .navbar-brand img,
-.navbar-brand a img {
-    height: 80px;           /* default desktop logo height */
-    width: auto !important;  /* maintain aspect ratio */
-    max-height: 100%;        /* never exceed parent */
-    display: block;
-    margin-right: 2rem;      /* optional space after logo */
-}
-
-/* Responsive logo scaling */
-@media (max-width: 820px) {
-    header .navbar-brand img,
-    .navbar-brand a img {
-        height: 80px !important;  /* smaller logo on mobile */
-        width: auto !important;
-    }
-}
-
-
-/* ========================
    Landing Page Stats Block
    ======================== */
 
 /* Ultra-specific targeting to override HugoBlox */
-section.block-stats .col-12 .h2,
-section.block-stats .col-12 h2 {
-    font-size: 1.5rem !important;  /* smaller desktop number */
+section.block-stats .col-12 h6,
+section.block-stats .col-12 h5,
+section.block-stats .col-12 h4,
+section.block-stats .col-12 h3,
+section.block-stats .col-12 h2,
+section.block-stats .col-12 h1 {
+    font-size: 1.5rem !important;  /* desktop number size */
     line-height: 1.2 !important;
     margin-bottom: 0.2rem !important; /* space below number */
 }
 
-section.block-stats .col-12 .text-gray-600,
-section.block-stats .col-12 p.text-gray-600 {
-    font-size: 0.875rem !important; /* smaller desktop text */
+section.block-stats .col-12 p,
+section.block-stats .col-12 .text-gray-600 {
+    font-size: 0.875rem !important; /* desktop description text */
     line-height: 1.1 !important;
     margin-bottom: 0.25rem !important; /* space below text */
 }
 
 /* Responsive adjustments */
 @media (max-width: 820px) {
-    section.block-stats .col-12 .h2,
-    section.block-stats .col-12 h2 {
+    section.block-stats .col-12 h6,
+    section.block-stats .col-12 h5,
+    section.block-stats .col-12 h4,
+    section.block-stats .col-12 h3,
+    section.block-stats .col-12 h2,
+    section.block-stats .col-12 h1 {
         font-size: 1.2rem !important; /* smaller on mobile */
         line-height: 1.2 !important;
         margin-bottom: 0.15rem !important;
     }
 
-    section.block-stats .col-12 .text-gray-600,
-    section.block-stats .col-12 p.text-gray-600 {
+    section.block-stats .col-12 p,
+    section.block-stats .col-12 .text-gray-600 {
         font-size: 0.75rem !important; /* smaller on mobile */
         line-height: 1.0 !important;
         margin-bottom: 0.2rem !important;
