@@ -20,7 +20,6 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,91 +32,24 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Setup pnpm
-        if: hashFiles('package.json') != ''
-        uses: pnpm/action-setup@v4
-
-      - name: Install dependencies
-        run: |
-          if [ -f "package.json" ]; then
-            echo "Installing Tailwind dependencies..."
-            pnpm install || npm install
-          fi
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${{ env.WC_HUGO_VERSION }}
           extended: true
 
-      # Cache dependencies (Go modules, node_modules)
-      - uses: actions/cache@v4
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
         with:
           path: |
-            /tmp/hugo_cache_runner/
+            resources/
             node_modules/
-            modules/*/node_modules/
-          key: ${{ runner.os }}-hugo-deps-${{ hashFiles('**/go.mod', '**/package-lock.json', '**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-hugo-cache-${{ hashFiles('assets/**/*', 'config/**/*') }}
           restore-keys: |
-            ${{ runner.os }}-hugo-deps-
+            ${{ runner.os }}-hugo-cache-
 
-      # Cache Hugo resources (processed images, CSS)
-      - uses: actions/cache@v4
-        with:
-          path: resources/
-          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('assets/**/*', 'config/**/*', 'hugo.yaml', 'package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-resources-
-
-      # -------------------------------
-      # Build Hugo site and compile Tailwind CSS from HugoBlox module
-      # -------------------------------
-      - name: Build Hugo & Compile Tailwind CSS
-        run: |
-          # Install pnpm globally
-          npm install -g pnpm
-          
-          # First build Hugo to generate hugo_stats.json
-          hugo
-          
-          # Vendor Hugo modules (creates _vendor folder)
-          hugo mod vendor
-          
-          # Go into HugoBlox Tailwind module
-          cd ./_vendor/github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind/
-          
-          # Install Tailwind dependencies in module
-          pnpm install
-          
-          # Set Tailwind content file
-          export HB_TW_CONTENT='../../../../../../hugo_stats.json'
-          
-          # Compile Tailwind CSS (HugoBlox uses its own styles.css)
-          npx tailwindcss -i ./assets/css/styles.css \
-            --config ./tailwind.config.js \
-            -o ../../../../../../assets/dist/wc.min.css \
-            --minify --postcss
-          
-          # Return to root and optionally clean _vendor
-          cd ../../../../../../
-          rm -rf _vendor
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
-      - name: Build with Hugo (final)
-        env:
-          HUGO_ENVIRONMENT: production
-        run: |
-          echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      - name: Generate Pagefind search index (if applicable)
-        run: |
-          if [ -f "package.json" ] && grep -q "pagefind" package.json; then
-            pnpm dlx pagefind --source "public" || npx pagefind --source "public"
-          fi
+      - name: Build Hugo site
+        run: hugo --minify --gc --baseURL "${{ github.server_url }}/${{ github.repository }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
@@ -125,15 +57,14 @@ jobs:
           path: ./public
 
   deploy:
-    if: github.repository_owner != 'HugoBlox'
     needs: build
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
