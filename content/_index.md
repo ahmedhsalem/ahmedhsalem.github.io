@@ -21,14 +21,15 @@ sections:
           button:
             text: Learn More
             url: "#solution"
-          image: "WebsitePage_Image_Phone.png"
     design:
+      css_class: "only-mobile rf-hero-img"
       background:
         image:
-              filename: "WebsitePage_Image_Phone.png"
-              filters:
-                brightness: 0.5
-      css_class: "only-mobile rf-hero-img"
+          filename: "WebsitePage_Image_Phone.png"
+          filters:
+            brightness: 0.5
+        position: center
+        size: cover
       spacing:
         padding: ["1.5rem", 0, "1.5rem", 0]
 
@@ -70,7 +71,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: WebsitePage_Image.png
+          filename: "WebsitePage_Image.png"
           filters:
             brightness: 0.5
         position: center
