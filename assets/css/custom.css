@@ -4,14 +4,14 @@
 .navbar-brand a img,
 .navbar-brand img,
 header img {
-  height: 150px !important; /* Large Logo */
+  height: auto !important; /* Large Logo */
   width: auto !important;
 }
 
 /* Reduced Global Padding for the Header (Reasonable Size) */
 .navbar {
-  padding-top: 1.5rem !important;    
-  padding-bottom: 1.5rem !important;
+  padding-top: 0.5rem !important;    
+  padding-bottom: 0.5rem !important;
 }
 
 @media (max-width: 820px) {
@@ -19,7 +19,7 @@ header img {
     .navbar-brand a img,
     .navbar-brand img,
     header img {
-        height: 100px !important;
+        height: auto !important;
     }
 
     /* Stats Block Mobile Text Size Reduction */
