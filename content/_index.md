@@ -21,7 +21,6 @@ sections:
           button:
             text: Learn More
             url: "#solution"
-          # image belongs here, inside the item:
           image: "WebsitePage_Image_Phone.png"
     design:
       css_class: "only-mobile rf-hero-img"
@@ -37,41 +36,42 @@ sections:
       text: |
         <!-- PAGE-LEVEL OVERRIDE CSS - DO NOT REMOVE -->
         <style>
-        /* Force mobile/desktop hero swap and overlay behavior */
+        /* Strong page-level override to ensure mobile overlay behavior */
         .only-desktop { display: block !important; }
         .only-mobile { display: none !important; }
 
-        /* Show mobile block on phones/small tablets, hide desktop there */
+        /* Show mobile block on phones, hide desktop */
         @media (max-width: 820px) {
           .only-desktop { display: none !important; }
           .only-mobile  { display: block !important; }
         }
 
-        /* Make mobile block's images behave like a hero background and fill width */
-        .only-mobile img,
-        .only-mobile .media img,
-        .only-mobile .item .media img,
-        .only-mobile .cta-image-paragraph img {
-          width: 100% !important;
-          height: auto !important;
+        /* Make sure the CTA block's item wrapper is positioned and sized */
+        .only-mobile .item,
+        .only-mobile .cta-image-paragraph .item {
+          position: relative !important;
           display: block !important;
+          overflow: hidden !important;
+          width: 100% !important;
+          /* give a visible hero height on phones */
+          min-height: 50svh !important;
+        }
+
+        /* Make the image fill the container */
+        .only-mobile .item .media,
+        .only-mobile .item .media img,
+        .only-mobile .media img {
+          width: 100% !important;
+          height: 100% !important;
           object-fit: cover !important;
           object-position: center center !important;
+          display: block !important;
         }
 
-        /* Position the mobile block's media to allow content overlay */
-        .only-mobile .media,
-        .only-mobile .item .media,
-        .only-mobile .cta-image-paragraph .media {
-          position: relative !important;
-          overflow: hidden !important;
-        }
-
-        /* Overlay the content on top of the mobile image */
-        .only-mobile .content,
+        /* Overlay the content on top of the image */
         .only-mobile .item .content,
         .only-mobile .cta-image-paragraph .content,
-        .only-mobile .cta-image-paragraph .text {
+        .only-mobile .media + .content {
           position: absolute !important;
           inset: 0 0 0 0 !important;
           display: flex !important;
@@ -83,8 +83,7 @@ sections:
           text-align: center !important;
         }
 
-        /* subtle gradient behind overlay text for readability */
-        .only-mobile .content::before,
+        /* Gradient for readability */
         .only-mobile .item .content::before,
         .only-mobile .cta-image-paragraph .content::before {
           content: "" !important;
@@ -94,33 +93,26 @@ sections:
           z-index: 4 !important;
         }
 
-        /* Ensure text sits above gradient */
-        .only-mobile .content > *,
+        /* Ensure text sits above the gradient */
         .only-mobile .item .content > * {
           position: relative !important;
           z-index: 6 !important;
           color: #fff !important;
         }
 
-        /* Buttons and typography tweaks for mobile */
-        .only-mobile h1,
-        .only-mobile .hero-title,
-        .only-mobile .content h1 {
+        /* Typo + button polish on phones */
+        .only-mobile h1, .only-mobile .hero-title, .only-mobile .item .content h1 {
           font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
           line-height: 1.15 !important;
           margin-bottom: .5rem !important;
         }
-        .only-mobile p,
-        .only-mobile .content p,
-        .only-mobile .lead {
+        .only-mobile p, .only-mobile .item .content p {
           font-size: clamp(.95rem, 3.8vw, 1.05rem) !important;
           line-height: 1.45 !important;
           max-width: 46ch !important;
           margin: 0 auto !important;
         }
-        .only-mobile .btn,
-        .only-mobile a.btn,
-        .only-mobile .content .btn {
+        .only-mobile .btn, .only-mobile a.btn {
           margin-top: .85rem !important;
           min-height: 44px !important;
           padding: .6rem 1rem !important;
@@ -128,7 +120,7 @@ sections:
           z-index: 7 !important;
         }
 
-        /* Desktop safety: ensure hero background remains cover on large screens */
+        /* Desktop safety */
         @media (min-width: 821px) {
           .only-desktop.rf-hero-bg {
             background-size: cover !important;
