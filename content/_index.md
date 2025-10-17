@@ -8,14 +8,33 @@ design:
 
 sections:
   # ---------------------------
-  # RESPONSIVE HERO (single block)
+  # MOBILE: image-based block (shows full image on phones)
+  # ---------------------------
+  - block: cta-image-paragraph
+    id: hero-mobile
+    content:
+      items:
+        - title: "RespiraFibre: Measuring Every Breath, Saving Lives"
+          text: |
+            Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of deterioration.
+          feature_icon: stethoscope
+          button:
+            text: Learn More
+            url: "#solution"
+          image: "WebsitePage_Image_Phone.png"
+    design:
+      css_class: "only-mobile rf-hero-img"
+      spacing:
+        padding: ["1.5rem", 0, "1.5rem", 0]
+
+  # ---------------------------
+  # DESKTOP: background hero (keeps the original look on wide screens)
   # ---------------------------
   - block: hero
-    id: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      text: |
-        Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of deterioration.
+      # FIXED: Removed '|' and put the text on one line for proper paragraph rendering.
+      text: Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
       primary_action:
         text: Learn More
         url: "#solution"
@@ -29,33 +48,116 @@ sections:
           text: "Read more"
           url: "/about"
     design:
-      css_class: "rf-hero-bg"
+      css_class: "only-desktop dark rf-hero-bg"
       background:
-        color: navy
+        color: "navy"
         image:
-          filename: "WebsitePage_Image.png"
+          filename: WebsitePage_Image.png
           filters:
             brightness: 0.5
-        position: center
-        size: cover
-      style: |
-        /* Responsive hero background */
-        @media (max-width: 820px) {
-          .rf-hero-bg {
-            background-image: url('WebsitePage_Image_Phone.png') !important;
-            background-size: cover !important;
-            background-position: center center !important;
-          }
-          /* Overlay content for readability */
-          .rf-hero-bg .hero-content {
-            color: #fff !important;
-            text-align: center !important;
-          }
-        }
+          position: center
+          size: cover
 
   # ---------------------------
-  # STATS
+  # PAGE-LEVEL OVERRIDE CSS - MOVED TO ITS OWN BLOCK FOR CLEANER CODE
   # ---------------------------
+  - block: html
+    content:
+      html: |
+        <style>
+        /* Strong page-level override to ensure mobile overlay behavior */
+        .only-desktop { display: block !important; }
+        .only-mobile { display: none !important; }
+
+        /* Show mobile block on phones, hide desktop */
+        @media (max-width: 820px) {
+          .only-desktop { display: none !important; }
+          .only-mobile  { display: block !important; }
+        }
+
+        /* Make sure the CTA block's item wrapper is positioned and sized */
+        .only-mobile .item,
+        .only-mobile .cta-image-paragraph .item {
+          position: relative !important;
+          display: block !important;
+          overflow: hidden !important;
+          width: 100% !important;
+          /* give a visible hero height on phones */
+          min-height: 50svh !important;
+        }
+
+        /* Make the image fill the container */
+        .only-mobile .item .media,
+        .only-mobile .item .media img,
+        .only-mobile .media img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+          object-position: center center !important;
+          display: block !important;
+        }
+
+        /* Overlay the content on top of the image */
+        .only-mobile .item .content,
+        .only-mobile .cta-image-paragraph .content,
+        .only-mobile .media + .content {
+          position: absolute !important;
+          inset: 0 0 0 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          padding: 1rem !important;
+          box-sizing: border-box !important;
+          z-index: 5 !important;
+          text-align: center !important;
+        }
+
+        /* Gradient for readability */
+        .only-mobile .item .content::before,
+        .only-mobile .cta-image-paragraph .content::before {
+          content: "" !important;
+          position: absolute !important;
+          inset: 0 !important;
+          background: linear-gradient(180deg, rgba(6,10,26,0.55) 0%, rgba(6,10,26,0.65) 100%) !important;
+          z-index: 4 !important;
+        }
+
+        /* Ensure text sits above the gradient */
+        .only-mobile .item .content > * {
+          position: relative !important;
+          z-index: 6 !important;
+          color: #fff !important;
+        }
+
+        /* Typo + button polish on phones */
+        .only-mobile h1, .only-mobile .hero-title, .only-mobile .item .content h1 {
+          font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
+          line-height: 1.15 !important;
+          margin-bottom: .5rem !important;
+        }
+        .only-mobile p, .only-mobile .item .content p {
+          font-size: clamp(.95rem, 3.8vw, 1.05rem) !important;
+          line-height: 1.45 !important;
+          max-width: 46ch !important;
+          margin: 0 auto !important;
+        }
+        .only-mobile .btn, .only-mobile a.btn {
+          margin-top: .85rem !important;
+          min-height: 44px !important;
+          padding: .6rem 1rem !important;
+          font-weight: 600 !important;
+          z-index: 7 !important;
+        }
+
+        /* Desktop safety */
+        @media (min-width: 821px) {
+          .only-desktop.rf-hero-bg {
+            background-size: cover !important;
+            background-position: center !important;
+          }
+        }
+        </style>
+
   - block: stats
     content:
       items:
@@ -76,9 +178,6 @@ sections:
       spacing:
         padding: ["1rem", 0, "1rem", 0]
 
-  # ---------------------------
-  # FEATURES
-  # ---------------------------
   - block: features
     id: solution
     content:
@@ -102,9 +201,6 @@ sections:
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
 
-  # ---------------------------
-  # CTA IMAGE + PARAGRAPH
-  # ---------------------------
   - block: cta-image-paragraph
     id: impact
     content:
@@ -122,9 +218,6 @@ sections:
             text: Learn About Our Technology
             url: "/technology"
 
-  # ---------------------------
-  # TESTIMONIALS
-  # ---------------------------
   - block: testimonials
     content:
       title: "What Clinicians Say:"
@@ -137,9 +230,6 @@ sections:
       spacing:
         padding: ["6rem", 0, 0, 0]
 
-  # ---------------------------
-  # CTA CARD
-  # ---------------------------
   - block: cta-card
     content:
       title: "Join Us in Transforming Respiratory Care"
