@@ -5,6 +5,14 @@ type: landing
 
 design:
   spacing: "6rem"
+  style: |
+    /* Strong global visibility CSS to prevent dual display */
+    .only-desktop { display: block !important; }
+    .only-mobile { display: none !important; }
+    @media (max-width: 820px) {
+      .only-desktop { display: none !important; }
+      .only-mobile { display: block !important; }
+    }
 
 sections:
   # ---------------------------
@@ -57,16 +65,7 @@ sections:
         position: center
         size: cover
       style: |
-        /* PAGE-LEVEL OVERRIDE CSS - DO NOT REMOVE */
-        .only-desktop { display: block !important; }
-        .only-mobile { display: none !important; }
-
-        @media (max-width: 820px) {
-          .only-desktop { display: none !important; }
-          .only-mobile  { display: block !important; }
-        }
-
-        /* Mobile hero CTA-image-paragraph adjustments */
+        /* Mobile hero overlay styling */
         .only-mobile .item,
         .only-mobile .cta-image-paragraph .item {
           position: relative !important;
@@ -75,7 +74,6 @@ sections:
           width: 100% !important;
           min-height: 50svh !important;
         }
-
         .only-mobile .item .media,
         .only-mobile .item .media img,
         .only-mobile .media img {
@@ -85,7 +83,6 @@ sections:
           object-position: center center !important;
           display: block !important;
         }
-
         .only-mobile .item .content,
         .only-mobile .cta-image-paragraph .content,
         .only-mobile .media + .content {
@@ -99,7 +96,6 @@ sections:
           z-index: 5 !important;
           text-align: center !important;
         }
-
         .only-mobile .item .content::before,
         .only-mobile .cta-image-paragraph .content::before {
           content: "" !important;
@@ -108,14 +104,12 @@ sections:
           background: linear-gradient(180deg, rgba(6,10,26,0.55) 0%, rgba(6,10,26,0.65) 100%) !important;
           z-index: 4 !important;
         }
-
         .only-mobile .item .content > *,
         .only-mobile .cta-image-paragraph .content > * {
           position: relative !important;
           z-index: 6 !important;
           color: #fff !important;
         }
-
         .only-mobile h1, .only-mobile .hero-title, .only-mobile .item .content h1 {
           font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
           line-height: 1.15 !important;
@@ -133,13 +127,6 @@ sections:
           padding: .6rem 1rem !important;
           font-weight: 600 !important;
           z-index: 7 !important;
-        }
-
-        @media (min-width: 821px) {
-          .only-desktop.rf-hero-bg {
-            background-size: cover !important;
-            background-position: center !important;
-          }
         }
 
   # ---------------------------
