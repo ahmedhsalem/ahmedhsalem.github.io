@@ -1,37 +1,18 @@
-############################
-## HUGO MODULES
-## Install or uninstall themes and plugins here.
-## Docs: https://gohugo.io/hugo-modules/
-############################
-
 imports:
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind
 
-# Mounts for HugoBlox blocks and your own layouts/assets
 mounts:
-  # Original HugoBlox community blocks
   - source: hugo-blox/blox/community
     target: layouts/_partials/blox/community/
     includeFiles: '**.html'
-
-  # Original HugoBlox all-access blocks
   - source: hugo-blox/blox/all-access
     target: layouts/_partials/blox/
     includeFiles: '**.html'
-
-  # Original HugoBlox CSS
   - source: hugo-blox/blox
     target: assets/dist/community/blox/
     includeFiles: '**.css'
-
-  # Your project layouts and assets
   - source: layouts
     target: layouts
   - source: assets
     target: assets
-
-  # Custom HugoBlox template overrides (mount last!)
-  - source: layouts/_partials/blox/custom
-    target: layouts/_partials/blox/
-    includeFiles: '**.html'
