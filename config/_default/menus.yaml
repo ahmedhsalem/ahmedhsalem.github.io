@@ -9,6 +9,6 @@ main:
   - name: Impact
     url: /#impact
     weight: 20
-  - name: Contact
+  - name: Contact Us
     url: /contact/
     weight: 50
