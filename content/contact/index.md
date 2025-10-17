@@ -1,12 +1,7 @@
 ---
 title: "Contact Us"
 type: "page"
-menu:
-  main:
-    identifier: "contact"
-    name: "Contact Us"
-    url: "/contact/"
-    weight: 50
+
 ---
 
 # Get in Touch
