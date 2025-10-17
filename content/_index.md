@@ -33,37 +33,10 @@ sections:
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      # FIXED: Removed '|' and put the text on one line for proper paragraph rendering.
-      text: Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
-      primary_action:
-        text: Learn More
-        url: "#solution"
-        icon: heart
-      secondary_action:
-        text: Contact Us
-        url: "/contact"
-      announcement:
-        text: "Patent-filed breakthrough in respiratory monitoring"
-        link:
-          text: "Read more"
-          url: "/about"
-    design:
-      css_class: "only-desktop dark rf-hero-bg"
-      background:
-        color: "navy"
-        image:
-          filename: WebsitePage_Image.png
-          filters:
-            brightness: 0.5
-          position: center
-          size: cover
-
-  # ---------------------------
-  # PAGE-LEVEL OVERRIDE CSS - MOVED TO ITS OWN BLOCK FOR CLEANER CODE
-  # ---------------------------
-  - block: html
-    content:
-      html: |
+      # FIX: The marketing copy is now immediately after the closing </style> tag.
+      # This removes the extra paragraph break that was messing up the text layout on desktop,
+      # while keeping the essential CSS inline for a successful build.
+      text: |
         <style>
         /* Strong page-level override to ensure mobile overlay behavior */
         .only-desktop { display: block !important; }
@@ -157,6 +130,29 @@ sections:
           }
         }
         </style>
+        Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
+      primary_action:
+        text: Learn More
+        url: "#solution"
+        icon: heart
+      secondary_action:
+        text: Contact Us
+        url: "/contact"
+      announcement:
+        text: "Patent-filed breakthrough in respiratory monitoring"
+        link:
+          text: "Read more"
+          url: "/about"
+    design:
+      css_class: "only-desktop dark rf-hero-bg"
+      background:
+        color: "navy"
+        image:
+          filename: WebsitePage_Image.png
+          filters:
+            brightness: 0.5
+          position: center
+          size: cover
 
   - block: stats
     content:
