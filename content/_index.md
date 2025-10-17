@@ -34,11 +34,11 @@ sections:
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      # Using '>-' to handle the multiline CSS without adding unwanted paragraph breaks.
-      # The marketing text is placed immediately after the closing </style> tag.
+      # FIX: Using '>-' and placing text immediately after </style> to fix formatting,
+      # with only the essential visibility CSS inside the style block.
       text: >-
         <style>
-        /* Strong page-level override to ensure mobile overlay behavior */
+        /* Strong page-level override to ensure mobile/desktop visibility */
         .only-desktop { display: block !important; }
         .only-mobile { display: none !important; }
 
@@ -46,80 +46,6 @@ sections:
         @media (max-width: 820px) {
           .only-desktop { display: none !important; }
           .only-mobile  { display: block !important; }
-        }
-
-        /* Make sure the CTA block's item wrapper is positioned and sized */
-        .only-mobile .item,
-        .only-mobile .cta-image-paragraph .item {
-          position: relative !important;
-          display: block !important;
-          overflow: hidden !important;
-          width: 100% !important;
-          /* give a visible hero height on phones */
-          min-height: 50svh !important;
-        }
-
-        /* Make the image fill the container */
-        .only-mobile .item .media,
-        .only-mobile .item .media img,
-        .only-mobile .media img {
-          width: 100% !important;
-          height: 100% !important;
-          object-fit: cover !important;
-          object-position: center center !important;
-          display: block !important;
-        }
-
-        /* Overlay the content on top of the image */
-        .only-mobile .item .content,
-        .only-mobile .cta-image-paragraph .content,
-        .only-mobile .media + .content {
-          position: absolute !important;
-          inset: 0 0 0 0 !important;
-          display: flex !important;
-          align-items: center !important;
-          justify-content: center !important;
-          padding: 1rem !important;
-          box-sizing: border-box !important;
-          z-index: 5 !important;
-          text-align: center !important;
-        }
-
-        /* Gradient for readability */
-        .only-mobile .item .content::before,
-        .only-mobile .cta-image-paragraph .content::before {
-          content: "" !important;
-          position: absolute !important;
-          inset: 0 !important;
-          background: linear-gradient(180deg, rgba(6,10,26,0.55) 0%, rgba(6,10,26,0.65) 100%) !important;
-          z-index: 4 !important;
-        }
-
-        /* Ensure text sits above the gradient */
-        .only-mobile .item .content > * {
-          position: relative !important;
-          z-index: 6 !important;
-          color: #fff !important;
-        }
-
-        /* Typo + button polish on phones */
-        .only-mobile h1, .only-mobile .hero-title, .only-mobile .item .content h1 {
-          font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
-          line-height: 1.15 !important;
-          margin-bottom: .5rem !important;
-        }
-        .only-mobile p, .only-mobile .item .content p {
-          font-size: clamp(.95rem, 3.8vw, 1.05rem) !important;
-          line-height: 1.45 !important;
-          max-width: 46ch !important;
-          margin: 0 auto !important;
-        }
-        .only-mobile .btn, .only-mobile a.btn {
-          margin-top: .85rem !important;
-          min-height: 44px !important;
-          padding: .6rem 1rem !important;
-          font-weight: 600 !important;
-          z-index: 7 !important;
         }
 
         /* Desktop safety */
