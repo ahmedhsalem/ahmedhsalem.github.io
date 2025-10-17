@@ -39,9 +39,7 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: "RespiraFibre"
-      # File should live at assets/media/RespiraFibrelogo-v2.svg
-      filename: "RespiraFibrelogo-v2.svg"
+      filename: "RespiraFibreLogo_Website.svg"
     button:
       enable: true
       text: "Contact Us"
