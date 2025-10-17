@@ -6,8 +6,13 @@
 # Appearance
 # =======================
 appearance:
-  mode: light               # or "system" if you want dark mode auto
+  mode: light              # or "system" if you want dark mode auto
   color: indigo
+  # --- CUSTOM CSS INCLUSION ---
+  css:
+    custom:
+      - css/custom.css
+  # ----------------------------
 
 # =======================
 # SEO / Marketing
@@ -18,7 +23,7 @@ marketing:
     org_name: "RespiraFibre"
     local_business_type: ""
     description: "RespiraFibre turns everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring to detect deterioration earlier."
-    twitter: ""             # your @handle if you have one (no @)
+    twitter: ""              # your @handle if you have one (no @)
   analytics:
     google_analytics: ""    # G-XXXXXXXXXX
     baidu_tongji: ""
@@ -44,7 +49,7 @@ header:
       enable: true
       text: "Contact Us"
       url: "/contact/"
-    show_search: false       # turn on later if you add a blog/search
+    show_search: false      # turn on later if you add a blog/search
     show_theme_chooser: false
 
 # (Nav links live in config/_default/menus.yaml — see below)
