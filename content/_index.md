@@ -5,43 +5,17 @@ type: landing
 
 design:
   spacing: "6rem"
-  style: |
-    /* Strong global visibility CSS to prevent dual display */
-    .only-desktop { display: block !important; }
-    .only-mobile { display: none !important; }
-    @media (max-width: 820px) {
-      .only-desktop { display: none !important; }
-      .only-mobile { display: block !important; }
-    }
 
 sections:
   # ---------------------------
-  # MOBILE HERO
-  # ---------------------------
-  - block: cta-image-paragraph
-    id: hero-mobile
-    content:
-      items:
-        - title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-          text: |
-            Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of deterioration.
-          feature_icon: stethoscope
-          button:
-            text: Learn More
-            url: "#solution"
-          image: "WebsitePage_Image_Phone.png"
-    design:
-      css_class: "only-mobile rf-hero-img"
-
-  # ---------------------------
-  # DESKTOP HERO
+  # RESPONSIVE HERO (single block)
   # ---------------------------
   - block: hero
-    id: hero-desktop
+    id: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
       text: |
-        Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
+        Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of deterioration.
       primary_action:
         text: Learn More
         url: "#solution"
@@ -55,9 +29,9 @@ sections:
           text: "Read more"
           url: "/about"
     design:
-      css_class: "only-desktop dark rf-hero-bg"
+      css_class: "rf-hero-bg"
       background:
-        color: "navy"
+        color: navy
         image:
           filename: "WebsitePage_Image.png"
           filters:
@@ -65,68 +39,18 @@ sections:
         position: center
         size: cover
       style: |
-        /* Mobile hero overlay styling */
-        .only-mobile .item,
-        .only-mobile .cta-image-paragraph .item {
-          position: relative !important;
-          display: block !important;
-          overflow: hidden !important;
-          width: 100% !important;
-          min-height: 50svh !important;
-        }
-        .only-mobile .item .media,
-        .only-mobile .item .media img,
-        .only-mobile .media img {
-          width: 100% !important;
-          height: 100% !important;
-          object-fit: cover !important;
-          object-position: center center !important;
-          display: block !important;
-        }
-        .only-mobile .item .content,
-        .only-mobile .cta-image-paragraph .content,
-        .only-mobile .media + .content {
-          position: absolute !important;
-          inset: 0 0 0 0 !important;
-          display: flex !important;
-          align-items: center !important;
-          justify-content: center !important;
-          padding: 1rem !important;
-          box-sizing: border-box !important;
-          z-index: 5 !important;
-          text-align: center !important;
-        }
-        .only-mobile .item .content::before,
-        .only-mobile .cta-image-paragraph .content::before {
-          content: "" !important;
-          position: absolute !important;
-          inset: 0 !important;
-          background: linear-gradient(180deg, rgba(6,10,26,0.55) 0%, rgba(6,10,26,0.65) 100%) !important;
-          z-index: 4 !important;
-        }
-        .only-mobile .item .content > *,
-        .only-mobile .cta-image-paragraph .content > * {
-          position: relative !important;
-          z-index: 6 !important;
-          color: #fff !important;
-        }
-        .only-mobile h1, .only-mobile .hero-title, .only-mobile .item .content h1 {
-          font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
-          line-height: 1.15 !important;
-          margin-bottom: .5rem !important;
-        }
-        .only-mobile p, .only-mobile .item .content p {
-          font-size: clamp(.95rem, 3.8vw, 1.05rem) !important;
-          line-height: 1.45 !important;
-          max-width: 46ch !important;
-          margin: 0 auto !important;
-        }
-        .only-mobile .btn, .only-mobile a.btn {
-          margin-top: .85rem !important;
-          min-height: 44px !important;
-          padding: .6rem 1rem !important;
-          font-weight: 600 !important;
-          z-index: 7 !important;
+        /* Responsive hero background */
+        @media (max-width: 820px) {
+          .rf-hero-bg {
+            background-image: url('WebsitePage_Image_Phone.png') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+          }
+          /* Overlay content for readability */
+          .rf-hero-bg .hero-content {
+            color: #fff !important;
+            text-align: center !important;
+          }
         }
 
   # ---------------------------
