@@ -8,13 +8,7 @@
 appearance:
   mode: light              # or "system" if you want dark mode auto
   color: indigo
-  # ----------------------------
 
-# =======================
-# Custom CSS overrides
-# =======================
-customCSS:
-  - "css/custom.css"
 
 # =======================
 # SEO / Marketing
@@ -69,3 +63,6 @@ footer:
 locale:
   date_format: "Jan 2, 2006"
   time_format: "3:04 PM"
+
+custom_scss:
+  - scss/custom.scss
