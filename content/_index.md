@@ -1,11 +1,8 @@
----
 title: "RespiraFibre"
 date: 2023-10-24
 type: landing
-
 design:
   spacing: "6rem"
-
 sections:
   # ---------------------------
   # MOBILE: image-based block (shows full image on phones)
@@ -24,10 +21,9 @@ sections:
           image: "WebsitePage_Image_Phone.png"
     design:
       # ESSENTIAL CLASS KEPT for mobile visibility
-      css_class: "only-mobile rf-hero-img" 
+      css_class: "only-mobile rf-hero-img"
       spacing:
         padding: ["1.5rem", 0, "1.5rem", 0]
-
   # ---------------------------
   # DESKTOP: background hero (keeps the original look on wide screens)
   # ---------------------------
@@ -72,53 +68,25 @@ sections:
             brightness: 0.5
           position: center
           size: cover
-
   - block: stats
     content:
       items:
         - statistic: "218M+"
           description: |
-            Patients receive oxygen  
+            Patients receive oxygen
             therapy worldwide each year
         - statistic: "7,964"
           description: |
-            UK deaths annually from  
+            UK deaths annually from
             missed patient deterioration
         - statistic: "£1.2B"
           description: |
-            Potential NHS annual savings  
+            Potential NHS annual savings
             from adoption
-      extra: |
-        <style>
-          /* Bulletproof inline CSS for HugoBlox stats block */
-          section.block-stats .statistic {
-            font-size: 1.2rem !important;    /* smaller numbers */
-            line-height: 1.2 !important;
-            margin-bottom: 0.2rem !important;
-          }
-
-          section.block-stats .description {
-            font-size: 0.85rem !important;   /* smaller description text */
-            line-height: 1.1 !important;
-            margin-bottom: 0.4rem !important;
-          }
-
-          @media (max-width: 820px) {
-            section.block-stats .statistic {
-              font-size: 1rem !important;    /* mobile numbers */
-              margin-bottom: 0.15rem !important;
-            }
-            section.block-stats .description {
-              font-size: 0.75rem !important; /* mobile description */
-              margin-bottom: 0.25rem !important;
-            }
-          }
-        </style>
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
         padding: ["0.1rem", 0, "0.1rem", 0]
-
   - block: features
     id: solution
     content:
@@ -141,7 +109,6 @@ sections:
           icon: bolt
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
-
   - block: cta-image-paragraph
     id: impact
     content:
@@ -155,7 +122,6 @@ sections:
             - Reduce ICU admissions and free bed space
             - Lower stress and workload for frontline staff
           image: build-website.png
-
   - block: testimonials
     content:
       title: "What Clinicians Say:"
@@ -167,7 +133,6 @@ sections:
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
-
   - block: cta-card
     content:
       title: "Join Us in Transforming Respiratory Care"
@@ -179,4 +144,3 @@ sections:
     design:
       card:
         css_class: "bg-primary-700"
----
