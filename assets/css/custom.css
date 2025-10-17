@@ -1,19 +1,29 @@
-/* assets/css/custom.css
-   Custom overrides loaded after the theme's CSS. */
-
-/* Example: larger logo on desktop, smaller on mobile */
+.navbar-brand a img,
 .navbar-brand img,
-header .navbar-brand img {
+header img {
   height: 120px !important;
   width: auto !important;
 }
 
-@media (max-width: 820px) {
-  .navbar-brand img,
-  header .navbar-brand img {
-    height: 80px !important;
-  }
+/* Global padding for the header to increase its overall size */
+.navbar {
+  padding-top: 5rem !important;    
+  padding-bottom: 5rem !important;
 }
 
-/* Example: small visual test (remove after verifying) */
-/* body { outline: 6px solid lime !important; } */
+@media (max-width: 820px) {
+    .navbar-brand a img,
+    .navbar-brand img,
+    header img {
+        height: 80px !important;
+    }
+
+    .block-stats .h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.2;
+    }
+
+    .block-stats .text-gray-600 {
+        font-size: 0.875rem !important;
+    }
+}
