@@ -40,7 +40,7 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      filename: "icon.png"
+      filename: "RespiraFibreLogoSVGSquare.svg"
       text: RespiraFibre
     button:
       enable: false
