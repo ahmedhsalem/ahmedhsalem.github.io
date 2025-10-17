@@ -73,53 +73,52 @@ sections:
           position: center
           size: cover
 
-    - block: stats
-      content:
-        items:
-          - statistic: "218M+"
-            description: |
-              Patients receive oxygen  
-              therapy worldwide each year
-          - statistic: "7,964"
-            description: |
-              UK deaths annually from  
-              missed patient deterioration
-          - statistic: "£1.2B"
-            description: |
-              Potential NHS annual savings  
-              from adoption
-        extra: |
-          <style>
-            /* Inline CSS to override HugoBlox styles */
-            section.block-stats h6,
-            section.block-stats p {
-              font-size: 1.2rem !important;      /* smaller number */
-              line-height: 1.2 !important;
-              margin-bottom: 0.25rem !important; /* space below number/text */
-            }
-  
-            section.block-stats p {
-              font-size: 0.875rem !important;    /* smaller description text */
-              line-height: 1.1 !important;
-              margin-bottom: 0.5rem !important; /* space below text */
-            }
-  
-            @media (max-width: 820px) {
-              section.block-stats h6 {
-                font-size: 1rem !important;      /* mobile numbers */
-                margin-bottom: 0.2rem !important;
-              }
-              section.block-stats p {
-                font-size: 0.75rem !important;   /* mobile description */
-                margin-bottom: 0.25rem !important;
-              }
-            }
-          </style>
-      design:
-        css_class: "bg-gray-100 dark:bg-gray-900"
-        spacing:
-          padding: ["0.1rem", 0, "0.1rem", 0]
+  - block: stats
+    content:
+      items:
+        - statistic: "218M+"
+          description: |
+            Patients receive oxygen  
+            therapy worldwide each year
+        - statistic: "7,964"
+          description: |
+            UK deaths annually from  
+            missed patient deterioration
+        - statistic: "£1.2B"
+          description: |
+            Potential NHS annual savings  
+            from adoption
+      extra: |
+        <style>
+          /* Inline CSS to shrink stats block text */
+          section.block-stats h6,
+          section.block-stats p {
+            font-size: 1.2rem !important;      /* desktop numbers */
+            line-height: 1.2 !important;
+            margin-bottom: 0.25rem !important; /* spacing below number/text */
+          }
 
+          section.block-stats p {
+            font-size: 0.875rem !important;    /* desktop description */
+            line-height: 1.1 !important;
+            margin-bottom: 0.5rem !important; /* spacing below text */
+          }
+
+          @media (max-width: 820px) {
+            section.block-stats h6 {
+              font-size: 1rem !important;      /* mobile numbers */
+              margin-bottom: 0.2rem !important;
+            }
+            section.block-stats p {
+              font-size: 0.75rem !important;   /* mobile description */
+              margin-bottom: 0.25rem !important;
+            }
+          }
+        </style>
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["0.1rem", 0, "0.1rem", 0]
 
   - block: features
     id: solution
@@ -157,7 +156,6 @@ sections:
             - Reduce ICU admissions and free bed space
             - Lower stress and workload for frontline staff
           image: build-website.png
-
 
   - block: testimonials
     content:
