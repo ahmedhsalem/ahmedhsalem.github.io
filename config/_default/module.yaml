@@ -27,6 +27,6 @@ mounts:
   # ---------------------------
   # Custom HugoBlox template overrides
   # ---------------------------
-  - source: layouts/_partials/blox/custom
-    target: layouts/_partials/blox/
+  - source: layouts/partials/blox/custom
+    target: layouts/partials/blox/
     includeFiles: '**.html'
