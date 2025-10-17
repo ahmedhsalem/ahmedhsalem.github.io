@@ -21,15 +21,9 @@ sections:
           button:
             text: Learn More
             url: "#solution"
+          image: "WebsitePage_Image_Phone.png"   # <-- move image here
     design:
       css_class: "only-mobile rf-hero-img"
-      background:
-        image:
-          filename: "WebsitePage_Image_Phone.png"
-          filters:
-            brightness: 0.5
-        position: center
-        size: cover
       spacing:
         padding: ["1.5rem", 0, "1.5rem", 0]
 
@@ -40,19 +34,6 @@ sections:
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
       text: |
-        <!-- PAGE-LEVEL OVERRIDE CSS - DO NOT REMOVE -->
-        <style>
-        /* Strong page-level override to ensure mobile overlay behavior */
-        .only-desktop { display: block !important; }
-        .only-mobile { display: none !important; }
-
-        /* Show mobile block on phones, hide desktop */
-        @media (max-width: 820px) {
-          .only-desktop { display: none !important; }
-          .only-mobile  { display: block !important; }
-        }
-        </style>
-
         Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
       primary_action:
         text: Learn More
@@ -76,6 +57,16 @@ sections:
             brightness: 0.5
         position: center
         size: cover
+      style: |
+        /* PAGE-LEVEL OVERRIDE CSS - DO NOT REMOVE */
+        .only-desktop { display: block !important; }
+        .only-mobile { display: none !important; }
+
+        /* Show mobile block on phones, hide desktop */
+        @media (max-width: 820px) {
+          .only-desktop { display: none !important; }
+          .only-mobile  { display: block !important; }
+        }
 
   - block: stats
     content:
