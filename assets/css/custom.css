@@ -4,6 +4,6 @@
    and forces the height, guaranteeing the override. */
 .navbar-brand a img,
 .navbar-brand img {
-  height: 90px !important; /* Increase this to 50px, 60px, etc. to test */
+  height: 200px !important; /* Increase this to 50px, 60px, etc. to test */
   width: auto !important;
 }
