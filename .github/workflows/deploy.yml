@@ -70,14 +70,14 @@ jobs:
             ${{ runner.os }}-hugo-resources-
 
       # -------------------------------
-      # Build Hugo site and Tailwind CSS
+      # Build Hugo site and compile Tailwind CSS from HugoBlox module
       # -------------------------------
-      - name: Build Hugo & Recompile Tailwind CSS
+      - name: Build Hugo & Compile Tailwind CSS
         run: |
           # Install pnpm globally
           npm install -g pnpm
           
-          # Build Hugo first to generate hugo_stats.json
+          # First build Hugo to generate hugo_stats.json
           hugo
           
           # Vendor Hugo modules (creates _vendor folder)
@@ -86,19 +86,19 @@ jobs:
           # Go into HugoBlox Tailwind module
           cd ./_vendor/github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind/
           
-          # Install Tailwind dependencies
-          pnpm i
+          # Install Tailwind dependencies in module
+          pnpm install
           
-          # Set Tailwind content path
+          # Set Tailwind content file
           export HB_TW_CONTENT='../../../../../../hugo_stats.json'
           
-          # Compile Tailwind CSS (input -> output)
+          # Compile Tailwind CSS (HugoBlox uses its own styles.css)
           npx tailwindcss -i ./assets/css/styles.css \
             --config ./tailwind.config.js \
             -o ../../../../../../assets/dist/wc.min.css \
             --minify --postcss
           
-          # Return to root and clean _vendor
+          # Return to root and optionally clean _vendor
           cd ../../../../../../
           rm -rf _vendor
 
