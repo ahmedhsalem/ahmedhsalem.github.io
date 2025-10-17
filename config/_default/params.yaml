@@ -9,7 +9,7 @@ appearance:
   mode: light              # or "system" if you want dark mode auto
   color: indigo
   # ----------------------------
-
+  - "css/custom.css"
 # =======================
 # SEO / Marketing
 # =======================
