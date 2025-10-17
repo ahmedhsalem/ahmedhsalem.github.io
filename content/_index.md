@@ -90,27 +90,26 @@ sections:
             from adoption
       extra: |
         <style>
-          /* Inline CSS to shrink stats block text */
-          section.block-stats h6,
-          section.block-stats p {
-            font-size: 1.2rem !important;      /* desktop numbers */
+          /* Bulletproof inline CSS for HugoBlox stats block */
+          section.block-stats .statistic {
+            font-size: 1.2rem !important;    /* smaller numbers */
             line-height: 1.2 !important;
-            margin-bottom: 0.25rem !important; /* spacing below number/text */
+            margin-bottom: 0.2rem !important;
           }
 
-          section.block-stats p {
-            font-size: 0.875rem !important;    /* desktop description */
+          section.block-stats .description {
+            font-size: 0.85rem !important;   /* smaller description text */
             line-height: 1.1 !important;
-            margin-bottom: 0.5rem !important; /* spacing below text */
+            margin-bottom: 0.4rem !important;
           }
 
           @media (max-width: 820px) {
-            section.block-stats h6 {
-              font-size: 1rem !important;      /* mobile numbers */
-              margin-bottom: 0.2rem !important;
+            section.block-stats .statistic {
+              font-size: 1rem !important;    /* mobile numbers */
+              margin-bottom: 0.15rem !important;
             }
-            section.block-stats p {
-              font-size: 0.75rem !important;   /* mobile description */
+            section.block-stats .description {
+              font-size: 0.75rem !important; /* mobile description */
               margin-bottom: 0.25rem !important;
             }
           }
