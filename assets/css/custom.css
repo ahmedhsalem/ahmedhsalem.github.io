@@ -8,9 +8,6 @@ header,
 .navbar-brand {
     height: auto !important;
     max-height: none !important;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem; /* optional padding around logo */
 }
 
 /* Logo scaling */
