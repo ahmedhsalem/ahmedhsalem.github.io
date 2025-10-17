@@ -8,7 +8,7 @@ design:
 
 sections:
   # ---------------------------
-  # MOBILE: image-based block (shows full image on phones)
+  # MOBILE HERO
   # ---------------------------
   - block: hero
     id: hero-mobile
@@ -21,16 +21,24 @@ sections:
           button:
             text: Learn More
             url: "#solution"
-          image: "WebsitePage_Image_Phone.png"   # <-- move image here
     design:
       css_class: "only-mobile rf-hero-img"
+      background:
+        image:
+          filename: "WebsitePage_Image_Phone.png"
+          filters:
+            brightness: 0.5
+        position: center
+        size: cover
       spacing:
+        margin: [0,0,0,0]       # Remove extra white space at top
         padding: ["1.5rem", 0, "1.5rem", 0]
 
   # ---------------------------
-  # DESKTOP: background hero (keeps the original look on wide screens)
+  # DESKTOP HERO
   # ---------------------------
   - block: hero
+    id: hero-desktop
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
       text: |
@@ -57,17 +65,21 @@ sections:
             brightness: 0.5
         position: center
         size: cover
+      spacing:
+        margin: [0,0,0,0]   # Remove extra white space at top
       style: |
         /* PAGE-LEVEL OVERRIDE CSS - DO NOT REMOVE */
         .only-desktop { display: block !important; }
         .only-mobile { display: none !important; }
 
-        /* Show mobile block on phones, hide desktop */
         @media (max-width: 820px) {
           .only-desktop { display: none !important; }
           .only-mobile  { display: block !important; }
         }
 
+  # ---------------------------
+  # STATS
+  # ---------------------------
   - block: stats
     content:
       items:
@@ -88,6 +100,9 @@ sections:
       spacing:
         padding: ["1rem", 0, "1rem", 0]
 
+  # ---------------------------
+  # FEATURES
+  # ---------------------------
   - block: features
     id: solution
     content:
@@ -111,6 +126,9 @@ sections:
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
 
+  # ---------------------------
+  # CTA IMAGE + PARAGRAPH
+  # ---------------------------
   - block: cta-image-paragraph
     id: impact
     content:
@@ -128,6 +146,9 @@ sections:
             text: Learn About Our Technology
             url: "/technology"
 
+  # ---------------------------
+  # TESTIMONIALS
+  # ---------------------------
   - block: testimonials
     content:
       title: "What Clinicians Say:"
@@ -140,6 +161,9 @@ sections:
       spacing:
         padding: ["6rem", 0, 0, 0]
 
+  # ---------------------------
+  # CTA CARD
+  # ---------------------------
   - block: cta-card
     content:
       title: "Join Us in Transforming Respiratory Care"
