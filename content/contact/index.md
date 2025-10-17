@@ -1,17 +1,8 @@
 ---
 title: "Contact Us"
-type: "contact-page"
-hide_cta: true
-hide_contact: true
+type: "page" 
 reading_time: false
 hide_author: true
-hide_social: true
-menu:
-  main:
-    identifier: "contact"
-    name: "Contact Us"
-    url: "/contact/"
-    weight: 50
 ---
 
 # Get in touch
