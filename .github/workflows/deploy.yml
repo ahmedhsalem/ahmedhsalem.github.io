@@ -5,13 +5,10 @@ env:
   NODE_VERSION: '20'
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: ['main']
-  # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
-# Provide permission to clone the repo and deploy it to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -22,7 +19,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build website
   build:
     if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
@@ -73,16 +69,36 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-resources-
 
-      # Rebuild Tailwind CSS for HugoBlox
-      - name: Rebuild HugoBlox Tailwind CSS
+      # -------------------------------
+      # Build Hugo site and Tailwind CSS
+      # -------------------------------
+      - name: Build Hugo & Recompile Tailwind CSS
         run: |
+          # Install pnpm globally
+          npm install -g pnpm
+          
+          # Build Hugo first to generate hugo_stats.json
+          hugo
+          
+          # Vendor Hugo modules (creates _vendor folder)
+          hugo mod vendor
+          
+          # Go into HugoBlox Tailwind module
           cd ./_vendor/github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind/
-          pnpm install
+          
+          # Install Tailwind dependencies
+          pnpm i
+          
+          # Set Tailwind content path
           export HB_TW_CONTENT='../../../../../../hugo_stats.json'
+          
+          # Compile Tailwind CSS (input -> output)
           npx tailwindcss -i ./assets/css/styles.css \
             --config ./tailwind.config.js \
             -o ../../../../../../assets/dist/wc.min.css \
             --minify --postcss
+          
+          # Return to root and clean _vendor
           cd ../../../../../../
           rm -rf _vendor
 
@@ -90,7 +106,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Hugo
+      - name: Build with Hugo (final)
         env:
           HUGO_ENVIRONMENT: production
         run: |
@@ -108,7 +124,6 @@ jobs:
         with:
           path: ./public
 
-  # Deploy website to GitHub Pages hosting
   deploy:
     if: github.repository_owner != 'HugoBlox'
     needs: build
