@@ -10,7 +10,7 @@ sections:
   # ---------------------------
   # MOBILE: image-based block (shows full image on phones)
   # ---------------------------
-  - block: cta-image-paragraph
+  - block: hero
     id: hero-mobile
     content:
       items:
