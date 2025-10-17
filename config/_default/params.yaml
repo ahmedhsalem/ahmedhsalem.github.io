@@ -24,7 +24,7 @@ marketing:
     site_type: Organization
     org_name: "RespiraFibre"
     local_business_type: ""
-    description: "RespiraFibre turns everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring to detect deterioration earlier."
+    description: "RespiraFibre turns everyday oxygen masks and nasal cannulas into life-saving sensors — continuous, unobtrusive respiratory monitoring to detect deterioration earlier."
     twitter: ""              # your @handle if you have one (no @)
   analytics:
     google_analytics: ""    # G-XXXXXXXXXX
