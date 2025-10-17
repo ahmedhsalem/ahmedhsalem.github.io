@@ -23,3 +23,10 @@ mounts:
     target: layouts
   - source: assets
     target: assets
+
+  # ---------------------------
+  # Custom HugoBlox template overrides
+  # ---------------------------
+  - source: layouts/_partials/blox/custom/stats
+    target: layouts/_partials/blox/
+    includeFiles: '**.html'
