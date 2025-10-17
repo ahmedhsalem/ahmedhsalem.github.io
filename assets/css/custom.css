@@ -6,15 +6,15 @@
 .navbar-brand a img,
 .navbar-brand img,
 header img {
-  height: 130px !important;
-  width: auto !important;
+  height: 3rem !important;
+  width: 2rem !important;
   max-height: none !important;
 }
 
 /* Add vertical spacing to the navbar on larger screens */
 .navbar {
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 /* ---------- Mobile / small screens ---------- */
@@ -36,19 +36,19 @@ header img {
   /* Decrease stats headline font size */
   .block-stats h2,
   .block-stats .h2 {
-    font-size: 1.15rem !important;
-    line-height: 1.2 !important;
+    font-size: 0.2rem !important;
+    line-height: 0.9 !important;
   }
 
   /* Decrease supporting text size for stats */
   .block-stats,
   .block-stats .text-gray-600 {
-    font-size: 0.82rem !important;
+    font-size: 0.5rem !important;
   }
 
   /* If the theme adds extra spacing wrappers, tighten those too */
   .rf-hero-bg, .hero, .hero .container {
-    padding-top: 1rem !important;
+    padding-top: 0rem !important;
     padding-bottom: 1rem !important;
   }
 }
