@@ -1,10 +1,23 @@
+.navbar-brand a img,
+.navbar-brand img,
 header img {
   height: 120px !important;
   width: auto !important;
 }
 
 @media (max-width: 820px) {
-  header img {
-    height: 80px !important;
-  }
+    .navbar-brand a img,
+    .navbar-brand img,
+    header img {
+        height: 80px !important;
+    }
+
+    .block-stats .h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.2;
+    }
+
+    .block-stats .text-gray-600 {
+        font-size: 0.875rem !important;
+    }
 }
