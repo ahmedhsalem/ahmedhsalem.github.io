@@ -23,7 +23,8 @@ sections:
             url: "#solution"
           image: "WebsitePage_Image_Phone.png"
     design:
-      css_class: "only-mobile rf-hero-img"
+      # ESSENTIAL CLASS KEPT for mobile visibility
+      css_class: "only-mobile rf-hero-img" 
       spacing:
         padding: ["1.5rem", 0, "1.5rem", 0]
 
@@ -33,10 +34,9 @@ sections:
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      # FIX: The marketing copy is now immediately after the closing </style> tag.
-      # This removes the extra paragraph break that was messing up the text layout on desktop,
-      # while keeping the essential CSS inline for a successful build.
-      text: |
+      # Using '>-' to handle the multiline CSS without adding unwanted paragraph breaks.
+      # The marketing text is placed immediately after the closing </style> tag.
+      text: >-
         <style>
         /* Strong page-level override to ensure mobile overlay behavior */
         .only-desktop { display: block !important; }
@@ -129,8 +129,7 @@ sections:
             background-position: center !important;
           }
         }
-        </style>
-        Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
+        </style>Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
       primary_action:
         text: Learn More
         url: "#solution"
@@ -144,6 +143,7 @@ sections:
           text: "Read more"
           url: "/about"
     design:
+      # ESSENTIAL CLASS KEPT for desktop visibility
       css_class: "only-desktop dark rf-hero-bg"
       background:
         color: "navy"
