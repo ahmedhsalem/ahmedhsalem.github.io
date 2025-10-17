@@ -1,9 +1,10 @@
-/* assets/css/custom.scss */
-
-// Use this to ensure your style is applied last, 
-// overriding any conflicting styles from Tailwind or the Blox module.
-.navbar-brand a img,
-.navbar-brand img {
-  height: 80px !important; /* Test with an extreme value like 80px */
+header img {
+  height: 120px !important;
   width: auto !important;
+}
+
+@media (max-width: 820px) {
+  header img {
+    height: 80px !important;
+  }
 }
