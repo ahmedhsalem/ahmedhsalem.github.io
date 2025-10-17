@@ -2,18 +2,10 @@
    Header / Logo Scaling
    ======================== */
 
-/* Make the header and parent container flexible */
-header,
-.navbar,
-.navbar-brand {
-    height: auto !important;
-    max-height: none !important;
-}
-
 /* Logo scaling */
 header .navbar-brand img,
 .navbar-brand a img {
-    height: 180px;           /* default desktop logo height */
+    height: 80px;           /* default desktop logo height */
     width: auto !important;  /* maintain aspect ratio */
     max-height: 100%;        /* never exceed parent */
     display: block;
@@ -24,7 +16,7 @@ header .navbar-brand img,
 @media (max-width: 820px) {
     header .navbar-brand img,
     .navbar-brand a img {
-        height: 100px !important;  /* smaller logo on mobile */
+        height: 80px !important;  /* smaller logo on mobile */
         width: auto !important;
     }
 }
