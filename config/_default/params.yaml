@@ -40,7 +40,8 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      filename: "RespiraFibreLogo_Website.svg"
+      filename: "icon.png"
+      text: RespiraFibre
     button:
       enable: false
       text: "Contact Us"
