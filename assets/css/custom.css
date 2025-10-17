@@ -1,9 +1,9 @@
-/* assets/css/custom.css */
+/* assets/css/custom.scss */
 
-/* Targets the image (img) inside the logo link (.navbar-brand) 
-   and forces the height, guaranteeing the override. */
+// Use this to ensure your style is applied last, 
+// overriding any conflicting styles from Tailwind or the Blox module.
 .navbar-brand a img,
 .navbar-brand img {
-  height: 200px !important; /* Increase this to 50px, 60px, etc. to test */
+  height: 80px !important; /* Test with an extreme value like 80px */
   width: auto !important;
 }
