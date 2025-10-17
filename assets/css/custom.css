@@ -1,5 +1,9 @@
-/* Custom CSS to increase the height of the logo */
+/* assets/css/custom.css */
+
+/* Targets the image (img) inside the logo link (.navbar-brand) 
+   and forces the height, guaranteeing the override. */
+.navbar-brand a img,
 .navbar-brand img {
-  height: 1000 px !important; /* Increase this value until it looks right */
-  width: 50 px;
+  height: 90px !important; /* Increase this to 50px, 60px, etc. to test */
+  width: auto !important;
 }
