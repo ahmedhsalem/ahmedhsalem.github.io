@@ -43,24 +43,26 @@ sections:
   # ---------------------------
   # MARKDOWN - Respiratory Rate Problem
   # ---------------------------
-  - block: markdown
+
+  - block: cta-button-list
     content:
       title: "The Respiratory Rate Problem"
-      subtitle: "Early detection saves lives"
-      problem: "Respiratory rate is often overlooked, leaving early signs of deterioration undetected. Continuous monitoring is critical for timely intervention."
-      text: |
-        ## Why It Matters
-        
-        Changes in breathing patterns can signal serious health issues before other symptoms appear. Respiratory rate is the most important and earliest vital sign to predict patient deterioration. 
-        
-        ### Challenges:
-        - Manual checks are infrequent and error-prone
-        - Existing automated sensors are intrusive, cumbersome, inaccurate
-        - Subtle changes often go unnoticed
+      text: "Respiratory rate is often overlooked, leaving early signs of deterioration undetected. Continuous monitoring is critical for timely intervention."
+      buttons:
+        - text: "Manual Checks Are Error-Prone"
+          url: "#"
+          icon: "exclamation-triangle"
+        - text: "Existing Sensors Are Intrusive"
+          url: "#"
+          icon: "x-circle"
+        - text: "Subtle Changes Go Unnoticed"
+          url: "#"
+          icon: "eye-slash"
     design:
-      columns: "1"
+      columns: "3"
       background:
-        color: white
+        color: "#001F3F" # Navy background
+        text_color: "#FFFFFF" # White text for readability
 
   # ---------------------------
   # STATS BLOCK
