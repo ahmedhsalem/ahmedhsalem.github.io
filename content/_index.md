@@ -24,7 +24,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: "media/WebsitePage_Image.png"
+          filename: "WebsitePage_Image.png"
           filters:
             brightness: 0.5
           position: center
