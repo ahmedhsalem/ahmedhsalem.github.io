@@ -23,7 +23,7 @@ sections:
         background:
           color: "navy"
           image:
-            filename: "media/WebsitePage_Image_Phone.png"
+            filename: "WebsitePage_Image_Phone.png"
             position: center
             size: cover
 
