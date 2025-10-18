@@ -50,13 +50,13 @@ sections:
       text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
       buttons:
         - text: "Manual Checks Are Error-Prone"
-          url: "#"
+          url: ""
           icon: "exclamation-triangle"
         - text: "Existing Sensors Are Intrusive"
-          url: "#"
+          url: ""
           icon: "x-circle"
         - text: "Subtle Changes Go Unnoticed"
-          url: "#"
+          url: ""
           icon: "eye-slash"
     design:
       css_class: "rf-cta-problem"   # <- important: used by custom CSS
