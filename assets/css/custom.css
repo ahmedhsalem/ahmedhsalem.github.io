@@ -1,3 +1,7 @@
+/* ================================
+   Navbar Styling
+   ================================ */
+
 /* Increase font size for main header menu items */
 #navbar-main .nav-item .nav-link {
     font-size: 1.1rem !important; /* Adjust this value as needed */
@@ -8,9 +12,23 @@
     font-size: 1rem !important; /* Adjust this value as needed */
 }
 
-/* Optional: Adjust font size for mobile view if needed (using a media query) */
+/* Adjust font size for mobile view */
 @media (max-width: 991px) { /* Adjust breakpoint as needed, often 991px for navbar collapse */
     #navbar-main .nav-item .nav-link {
         font-size: 1.2rem !important; /* Larger font size for mobile menu */
+    }
+}
+
+/* ================================
+   Hero Block Mobile Background
+   ================================ */
+
+/* Mobile Hero Background Override */
+@media (max-width: 820px) {
+    /* Target the HugoBlox HERO block with rf-hero-bg class */
+    section.rf-hero-bg {
+        background-image: url('/media/WebsitePage_Image_Phone.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 }
