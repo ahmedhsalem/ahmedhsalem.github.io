@@ -25,8 +25,17 @@ sections:
           image:
             filename: "WebsitePage_Image.png"
             position: center
-            size: contain
-
+            size: cover
+            filters:
+              brightness: 0.5
+        css_style: |
+          @media (max-width: 820px) {
+            .rf-hero-bg {
+              background-image: url('{{ "media/WebsitePage_Image_Phone.png" | relURL }}') !important;
+              background-size: cover !important;
+              background-position: center !important;
+            }
+          }
   # ---------------------------
   # STATS BLOCK
   # ---------------------------
