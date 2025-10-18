@@ -7,66 +7,40 @@ design:
   spacing: "6rem"
 
 sections:
-  # ---------------------------
-  # MOBILE: image-based block (shows full image on phones)
-  # ---------------------------
-  - block: cta-image-paragraph
-    id: hero-mobile
-    content:
-      items:
-        - title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-          text: |
-            Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of deterioration.
-          feature_icon: stethoscope
-          button:
-            text: Learn More
-            url: "#solution"
-          image: "WebsitePage_Image_Phone.png"
-    design:
-      css_class: "only-mobile rf-hero-img"
-      spacing:
-        padding: ["1.5rem", 0, "1.5rem", 0]
+- block: hero
+  content:
+    title: "RespiraFibre: Measuring Every Breath, Saving Lives"
+    text: "Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration."
+    primary_action:
+      text: Learn More
+      url: "#solution"
+      icon: heart
+    secondary_action:
+      text: Contact Us
+      url: "/contact"
+  design:
+    css_class: "rf-hero-bg dark"
+    css_style: |
+      /* Default background for desktop */
+      .rf-hero-bg {
+        background-image: url('/images/WebsitePage_Image.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-  # ---------------------------
-  # DESKTOP: background hero (keeps the original look on wide screens)
-  # ---------------------------
-  - block: hero
-    content:
-      title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      text: >-
-        <style>
-        .only-desktop { display: block !important; }
-        .only-mobile { display: none !important; }
-
-        @media (max-width: 820px) {
-          .only-desktop { display: none !important; }
-          .only-mobile  { display: block !important; }
+      /* Mobile-specific background */
+      @media (max-width: 820px) {
+        .rf-hero-bg {
+          background-image: url('/images/WebsitePage_Image_Phone.png');
+          background-size: cover;
+          background-position: center;
         }
+      }
 
-        @media (min-width: 821px) {
-          .only-desktop.rf-hero-bg {
-            background-size: cover !important;
-            background-position: center !important;
-          }
-        }
-        </style>Revolutionary nanotechnology transforms everyday oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration.
-      primary_action:
-        text: Learn More
-        url: "#solution"
-        icon: heart
-      secondary_action:
-        text: Contact Us
-        url: "/contact"
-    design:
-      css_class: "only-desktop dark rf-hero-bg"
-      background:
-        color: "navy"
-        image:
-          filename: WebsitePage_Image.png
-          filters:
-            brightness: 0.5
-          position: center
-          size: cover
+    background:
+      color: "navy"
+
 
   # ---------------------------
   # STATS BLOCK
