@@ -50,6 +50,7 @@ sections:
     content:
       title: "The Respiratory Rate Problem"
       text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
+      disable_click: true 
       buttons:
         - text: "Manual Checks are Error-Prone"
           url: "#Problem"
