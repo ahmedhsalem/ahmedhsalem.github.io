@@ -1,6 +1,6 @@
 ---
 title: "RespiraFibre"
-date: 2023-10-24
+date: 2025-10-18
 type: landing
 
 design:
@@ -74,41 +74,16 @@ sections:
   - block: stats
     content:
       items:
+        - statistic: "70%"
+        description: "of respiratory rate measurements are inaccurate"
         - statistic: "218M+"
-          description: |
-            Patients receive oxygen  
-            therapy worldwide each year
+          description: "Patients receive oxygen therapy worldwide each year"
         - statistic: "7,964"
-          description: |
-            UK deaths annually from  
-            missed patient deterioration
+          description:"UK deaths annually from missed patient deterioration"
         - statistic: "£1.2B"
-          description: |
-            Potential NHS annual savings  
-            from adoption
+          description: "Potential NHS annual savings from adoption"
     design:
-      css_class: "bg-gray-100 dark:bg-gray-900"
-      css_style: |
-        /* Inline style override for smaller fonts in stats block */
-        h6 {
-          font-size: 1.5rem !important;
-          line-height: 1.2 !important;
-        }
-        p {
-          font-size: 0.85rem !important;
-          line-height: 1.1 !important;
-          margin-top: 0.25rem !important;
-        }
-        @media (max-width: 820px) {
-          h6 {
-            font-size: 1.2rem !important;
-          }
-          p {
-            font-size: 0.75rem !important;
-          }
-        }
-      spacing:
-        padding: ["1rem", 0, "1rem", 0]
+      columns: "2"
 
   # ---------------------------
   # FEATURES
@@ -135,6 +110,15 @@ sections:
           icon: bolt
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
+        - name: Reduced ICU Admissions
+          icon: shield
+          description: |
+            Continuous monitoring allows earlier intervention, helping to reduce ICU admissions and improve patient outcomes.
+        - name: Shorter Hospital Stay
+          icon: clock
+          description: |
+            Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs.
+
 
   # ---------------------------
   # IMPACT
@@ -143,19 +127,24 @@ sections:
     id: impact
     content:
       items:
-        - title: "Impact"
+        - title: "Transforming Patient Care with RespiraFibre"
           text: |
-            One-third of inpatients deteriorate during hospitalisation. RespiraFibre enables earlier recognition and intervention, reducing ICU admissions, cardiac arrests, deaths — and helping clinicians deliver safer care.
+            RespiraFibre’s continuous respiratory monitoring enables hospitals to intervene earlier, reduce critical events, and improve patient outcomes. By integrating seamlessly into hospital workflows, it empowers clinicians and protects patients.
           feature_icon: check
           features:
-            - Save lives by catching deterioration earlier
-            - Reduce ICU admissions and free bed space
-            - Lower stress and workload for frontline staff
+            - title: "Reduced ICU Admissions"
+              icon: shield
+              description: "Continuous monitoring allows early interventions, preventing deterioration that requires ICU care."
+            - title: "Shorter Hospital Stay"
+              icon: clock
+              description: "Early detection lowers average length of stay, freeing beds and reducing hospital costs."
+            - title: "Lives Saved"
+              icon: heart
+              description: "Timely alerts help clinicians act sooner, preventing complications and saving lives."
+            - title: "Staff Efficiency"
+              icon: user-group
+              description: "Reduces emergency events and false alarms, allowing staff to focus on patient care."
           image: build-website.png
-          button:
-            text: Learn About Our Technology
-            url: "/technology"
-
   # ---------------------------
   # TESTIMONIALS
   # ---------------------------
