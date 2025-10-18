@@ -1,10 +1,15 @@
-{{/* OVERRIDE: layouts/_partials/blox/stats/block.html */}}
+{{/* Hugo Blox: Stats */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 {{ $title := $block.content.title | emojify | $page.RenderString }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
 
-<div id="rf-stats-override-debug" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
   {{ with $title }}
   <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -17,24 +22,7 @@
   </div>
   {{ end }}
 
-  <!-- Strong inline style to ensure override (debug) -->
-  <style>
-    #rf-stats-override-debug h6 {
-      font-size: 0.4rem !important;      /* painfully tiny to prove override */
-      color: #ff0000 !important;         /* bright red */
-      background: rgba(255,255,0,0.6) !important;
-      padding: 0.05rem 0.1rem !important;
-      display: inline-block !important;
-    }
-    #rf-stats-override-debug p {
-      font-size: 0.35rem !important;     /* tiny description */
-      color: #0033cc !important;
-      background: rgba(224,242,254,0.6) !important;
-      padding: 0.03rem 0.08rem !important;
-    }
-  </style>
-
-  <div class="grid grid-cols-3 row-gap-8">
+  <div class="grid grid-cols-2 row-gap-8">
     {{ range $idx, $item := $block.content.items }}
     <div class="text-center {{if ne (math.Add $idx 1) (len $block.content.items) }}md:border-r{{end}}">
       <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">
