@@ -5,8 +5,11 @@ type: landing
 
 design:
   spacing: "6rem"
-  
+
 sections:
+  # ---------------------------
+  # HERO
+  # ---------------------------
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
@@ -19,15 +22,15 @@ sections:
         text: Contact Us
         url: "/contact"
     design:
-        css_class: "rf-hero-bg dark"
-        background:
-          color: "navy"
-          image:
-            filename: "WebsitePage_Image.png"
-            position: center
-            size: cover
-            filters:
-              brightness: 0.5
+      css_class: "rf-hero-bg dark"
+      background:
+        color: "navy"
+        image:
+          filename: "WebsitePage_Image.png"
+          position: center
+          size: cover
+          filters:
+            brightness: 0.5
     css_style: |
       @media (max-width: 820px) {
         section.rf-hero-bg {
@@ -37,25 +40,27 @@ sections:
         }
       }
 
-    - block: markdown
-        content:
-          title: "The Respiratory Rate Problem"
-          subtitle: "Early detection saves lives"
-          problem: "Respiratory rate is often overlooked, leaving early signs of deterioration undetected. Continuous monitoring is critical for timely intervention."
-          text: |
-            ## Why It Matters
-            
-            Changes in breathing patterns can signal serious health issues before other symptoms appear. Respiratory rate is the most important and earliest vital sign to predict patient deterioration. 
-            
-            ### Challenges:
-            - Manual checks are infrequent and error-prone
-            - Existing automated sensors are intrusive, cumbersome, inaccurate
-            - Subtle changes often go unnoticed
-            
-        design:
-          columns: "1"
-          background:
-            color: white
+  # ---------------------------
+  # MARKDOWN - Respiratory Rate Problem
+  # ---------------------------
+  - block: markdown
+    content:
+      title: "The Respiratory Rate Problem"
+      subtitle: "Early detection saves lives"
+      problem: "Respiratory rate is often overlooked, leaving early signs of deterioration undetected. Continuous monitoring is critical for timely intervention."
+      text: |
+        ## Why It Matters
+        
+        Changes in breathing patterns can signal serious health issues before other symptoms appear. Respiratory rate is the most important and earliest vital sign to predict patient deterioration. 
+        
+        ### Challenges:
+        - Manual checks are infrequent and error-prone
+        - Existing automated sensors are intrusive, cumbersome, inaccurate
+        - Subtle changes often go unnoticed
+    design:
+      columns: "1"
+      background:
+        color: white
 
   # ---------------------------
   # STATS BLOCK
