@@ -28,14 +28,6 @@ sections:
             size: cover
             filters:
               brightness: 0.5
-        css_style: |
-          @media (max-width: 820px) {
-            section.rf-hero-bg {
-              background-image: url('/media/WebsitePage_Image_Phone.png') !important;
-              background-size: cover !important;
-              background-position: center !important;
-            }
-          }
 
   # ---------------------------
   # STATS BLOCK
