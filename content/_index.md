@@ -70,44 +70,7 @@ sections:
 
   # ---------------------------
   # STATS BLOCK (with inline style overrides)
-    # ---------------------------
-  <style>
-  /* Target the stats block numbers and descriptions robustly and override Tailwind */
-  div.grid.grid-cols-3 > div.text-center h6,
-  section.block-stats h6,
-  section.block-stats h6.text-4xl,
-  section.block-stats h6.text-5xl,
-  section.block-stats h6.text-6xl,
-  section.block-stats h6[class*="text-"] {
-    font-size: 1.2rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 0.2rem !important;
-  }
-  
-  /* Description text */
-  div.grid.grid-cols-3 > div.text-center p,
-  section.block-stats p,
-  section.block-stats p.text-sm,
-  section.block-stats p.text-base,
-  section.block-stats p[class*="text-"] {
-    font-size: 0.86rem !important;
-    line-height: 1.1 !important;
-    margin-top: 0.25rem !important;
-  }
-  
-  /* Responsive */
-  @media (max-width: 820px) {
-    div.grid.grid-cols-3 > div.text-center h6,
-    section.block-stats h6 {
-      font-size: 1.0rem !important;
-    }
-    div.grid.grid-cols-3 > div.text-center p,
-    section.block-stats p {
-      font-size: 0.78rem !important;
-    }
-  }
-  </style>
-  
+    # --------------------------- 
   - block: stats
     content:
       items:
