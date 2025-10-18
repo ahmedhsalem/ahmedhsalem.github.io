@@ -69,21 +69,21 @@ sections:
           size: cover
 
   # ---------------------------
-  # STATS BLOCK (with inline style overrides)
-    # --------------------------- 
+  # STATS BLOCK
+  # ---------------------------
   - block: stats
     content:
       items:
         - statistic: "70%"
-        description: "of respiratory rate measurements are inaccurate"
+          description: "of respiratory rate measurements are inaccurate"
         - statistic: "218M+"
           description: "Patients receive oxygen therapy worldwide each year"
         - statistic: "7,964"
-          description:"UK deaths annually from missed patient deterioration"
+          description: "UK deaths annually from missed patient deterioration"
         - statistic: "£1.2B"
           description: "Potential NHS annual savings from adoption"
     design:
-      columns: "2"
+      columns: 2
 
   # ---------------------------
   # FEATURES
@@ -119,7 +119,6 @@ sections:
           description: |
             Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs.
 
-
   # ---------------------------
   # IMPACT
   # ---------------------------
@@ -145,6 +144,7 @@ sections:
               icon: user-group
               description: "Reduces emergency events and false alarms, allowing staff to focus on patient care."
           image: build-website.png
+
   # ---------------------------
   # TESTIMONIALS
   # ---------------------------
