@@ -18,20 +18,14 @@ sections:
       secondary_action:
         text: Contact Us
         url: "/contact"
-      image:
-        filename: "WebsitePage_Image.png"
-        filters:
-          brightness: 0.5
-        position: center
-        size: cover
-      mobile_image:
-        filename: "WebsitePage_Image_Phone.png"
-        filters:
-          brightness: 0.5
-        position: center
-        size: contain
     design:
-      css_class: "rf-hero-bg dark"
+        css_class: "rf-hero-bg dark"
+        background:
+          color: "navy"
+          image:
+            filename: "media/WebsitePage_Image_Phone.png"
+            position: center
+            size: cover
 
   # ---------------------------
   # STATS BLOCK
