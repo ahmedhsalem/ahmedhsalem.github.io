@@ -111,7 +111,7 @@ sections:
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
         - name: Reduced ICU Admissions
-          icon: shield
+          icon: "custom/shield"
           description: |
             Continuous monitoring allows earlier intervention, helping to reduce ICU admissions and improve patient outcomes.
         - name: Shorter Hospital Stay
