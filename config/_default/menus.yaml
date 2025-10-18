@@ -6,9 +6,6 @@ main:
   - name: Our Solution
     url: /#solution
     weight: 10
-  - name: Impact
-    url: /#impact
-    weight: 20
   - name: Contact Us
     url: /contact/
     weight: 50
