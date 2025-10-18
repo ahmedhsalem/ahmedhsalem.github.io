@@ -4,7 +4,7 @@ date: 2025-10-18
 type: landing
 
 design:
-  spacing: "6rem"
+  spacing: "3rem"
 
 sections:
   # ---------------------------
@@ -23,6 +23,8 @@ sections:
         url: "/contact"
     design:
       css_class: "rf-hero-bg dark"
+      spacing:
+        padding: ["1.5rem", 0, "1.5rem", 0]
       background:
         color: "navy"
         image:
