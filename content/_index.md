@@ -34,7 +34,6 @@ sections:
           background-image: url('/media/WebsitePage_Image_Phone.png') !important;
           background-size: cover !important;
           background-position: center !important;
-          filter: brightness(0.5) !important;
         }
       }
 
