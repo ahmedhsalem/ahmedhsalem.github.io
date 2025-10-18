@@ -19,13 +19,13 @@ sections:
         text: Contact Us
         url: "/contact"
       image:
-        filename: "media/WebsitePage_Image.png"
+        filename: "WebsitePage_Image.png"
         filters:
           brightness: 0.5
         position: center
         size: cover
       mobile_image:
-        filename: "media/WebsitePage_Image_Phone.png"
+        filename: "WebsitePage_Image_Phone.png"
         filters:
           brightness: 0.5
         position: center
