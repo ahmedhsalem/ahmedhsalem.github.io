@@ -37,6 +37,26 @@ sections:
         }
       }
 
+- block: markdown
+    content:
+      title: "The Respiratory Rate Problem"
+      subtitle: "Early detection saves lives"
+      problem: "Respiratory rate is often overlooked, leaving early signs of deterioration undetected. Continuous monitoring is critical for timely intervention."
+      text: |
+        ## Why It Matters
+        
+        Changes in breathing patterns can signal serious health issues before other symptoms appear. Respiratory rate is the most important and earliest vital sign to predict patient deterioration. 
+        
+        ### Challenges:
+        - Manual checks are infrequent and error-prone
+        - Existing automated sensors are intrusive, cumbersome, inaccurate
+        - Subtle changes often go unnoticed
+        
+    design:
+      columns: "1"
+      background:
+        color: white
+
   # ---------------------------
   # STATS BLOCK
   # ---------------------------
