@@ -33,7 +33,7 @@ sections:
             .rf-hero-bg {
               background-image: url('{{ "media/WebsitePage_Image_Phone.png" | relURL }}') !important;
               background-size: contain !important;
-              background-position: center !important;
+              background-position: right !important;
             }
           }
   # ---------------------------
