@@ -43,21 +43,29 @@ sections:
       }
 
   # ---------------------------
-  # MARKDOWN - Respiratory Rate Problem
+  # ButtonList - Respiratory Rate Problem
   # ---------------------------
+  
   - block: cta-button-list
+  - id: Problem
     content:
-      title: "<h2>The Respiratory Rate Problem</h2>"
-      text: "<p>Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention.</p>"
-      buttons_html: |
-        <button type="button" class="cta-btn"><i class="exclamation-triangle"></i> Manual Checks Are Error-Prone</button>
-        <button type="button" class="cta-btn"><i class="x-circle"></i> Existing Sensors Are Intrusive</button>
-        <button type="button" class="cta-btn"><i class="eye-slash"></i> Subtle Changes Go Unnoticed</button>
+      title: "The Respiratory Rate Problem""
+      text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
+      buttons:
+        - text: "Manual Checks are Error-Prone"
+          url: "#Problem"
+          icon: "exclamation-triangle"
+        - text: "Existing Sensors are Intrusive"
+          url: "#Problem"
+          icon: "x-circle"
+        - text: "Subtle Changes Go Unnoticed"
+          url: "#Problem"
+          icon: "eye-slash"
     design:
-      css_class: "rf-cta-problem"
+      columns: "1"
       background:
-        color: "#FFFFFF"
-        text_color: "#00043f"
+        color: "blue-50"
+---
 
   # ---------------------------
   # STATS BLOCK
