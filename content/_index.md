@@ -23,7 +23,7 @@ sections:
         background:
           color: "navy"
           image:
-            filename: "WebsitePage_Image_Phone.png"
+            filename: "WebsitePage_Image.png"
             position: center
             size: contain
 
@@ -35,14 +35,10 @@ sections:
       items:
         - statistic: "70%"
           description: "of respiratory rate measurements are inaccurate"
-        - statistic: "218M+"
-          description: "Patients receive oxygen therapy worldwide each year"
-        - statistic: "7,964"
-          description: "UK deaths annually from missed patient deterioration"
         - statistic: "£1.2B"
           description: "Potential NHS annual savings from adoption"
-    design:
-      columns: 2
+        - statistic: "7,964"
+          description: "UK deaths annually from missed patient deterioration"
 
   # ---------------------------
   # FEATURES
