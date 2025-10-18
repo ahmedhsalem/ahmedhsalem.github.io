@@ -10,23 +10,32 @@ imports:
 
 # Install any Hugo Blox within the `hugo-blox/blox/` folder
 mounts:
+  # Mount the original HugoBlox community blocks into _partials (underscore)
   - source: hugo-blox/blox/community
-    target: layouts/partials/blox/community/
+    target: layouts/_partials/blox/community/
     includeFiles: '**.html'
+
+  # Mount the original HugoBlox all-access blocks into _partials (underscore)
   - source: hugo-blox/blox/all-access
-    target: layouts/partials/blox/
+    target: layouts/_partials/blox/
     includeFiles: '**.html'
+
+  # HugoBlox CSS assets
   - source: hugo-blox/blox
     target: assets/dist/community/blox/
     includeFiles: '**.css'
-  - source: layouts
-    target: layouts
+
+  # Your project layouts and assets (optional: keep or comment out while testing)
+  # If you have this and it causes confusion, temporarily comment it out.
+  # - source: layouts
+  #   target: layouts
+
   - source: assets
     target: assets
 
   # ---------------------------
-  # Custom HugoBlox template overrides
+  # Custom HugoBlox template overrides (mount this last so it takes precedence)
   # ---------------------------
-  - source: layouts/partials/blox/custom
-    target: layouts/partials/blox/
+  - source: layouts/_partials/blox/custom
+    target: layouts/_partials/blox/
     includeFiles: '**.html'
