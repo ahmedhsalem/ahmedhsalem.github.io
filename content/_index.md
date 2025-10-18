@@ -34,7 +34,6 @@ sections:
           background-image: url('/media/WebsitePage_Image_Phone.png') !important;
           background-size: cover !important;
           background-position: center !important;
-          filter: brightness(0.5) !important;
         }
       }
 
@@ -46,10 +45,10 @@ sections:
       items:
         - statistic: "70%"
           description: "of respiratory rate measurements are inaccurate"
-        - statistic: "£1.2B"
-          description: "Potential NHS annual savings from adoption"
         - statistic: "7,964"
           description: "UK deaths annually from missed patient deterioration"
+        - statistic: "£1.2B"
+          description: "Potential NHS annual savings from adoption"
 
   # ---------------------------
   # FEATURES
