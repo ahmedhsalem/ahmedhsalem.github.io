@@ -27,8 +27,5 @@
         background-image: url('/media/WebsitePage_Image_Phone.png') !important;
         background-size: cover !important;
         background-position: center !important;
-
-        /* Apply filter to darken the image */
-        filter: brightness(0.5) !important; 
     }
 }
