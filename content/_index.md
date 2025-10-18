@@ -31,7 +31,7 @@ sections:
           size: contain
         # Mobile background via inline CSS
     css_style: |
-      {{ $mobile := resources.Get "media/WebsitePage_Image_Phone.png" }}
+      {{ $mobile := resources.Get "WebsitePage_Image_Phone.png" }}
       @media (max-width: 820px) {
         .rf-hero-bg {
           background-image: url('{{ $mobile.RelPermalink }}') !important;
