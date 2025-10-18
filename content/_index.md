@@ -28,16 +28,17 @@ sections:
           filters:
             brightness: 0.5
           position: center
-          size: cover
+          size: contain
         # Mobile background via inline CSS
-      css_style: |
-        @media (max-width: 820px) {
-          .rf-hero-bg {
-            background-image: url('/media/WebsitePage_Image_Phone.png') !important;
-            background-size: contain !important;
-            background-position: center !important;
-          }
+    css_style: |
+      {{ $mobile := resources.Get "media/WebsitePage_Image_Phone.png" }}
+      @media (max-width: 820px) {
+        .rf-hero-bg {
+          background-image: url('{{ $mobile.RelPermalink }}') !important;
+          background-size: contain !important;
+          background-position: center !important;
         }
+      }
 
   # ---------------------------
   # STATS BLOCK
