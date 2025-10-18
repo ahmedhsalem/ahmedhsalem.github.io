@@ -22,13 +22,13 @@
 /* ================================
    Hero Block Mobile Background
    ================================ */
-
-/* Mobile Hero Background Override */
 @media (max-width: 820px) {
-    /* Target the HugoBlox HERO block with rf-hero-bg class */
     section.rf-hero-bg {
         background-image: url('/media/WebsitePage_Image_Phone.png') !important;
         background-size: cover !important;
         background-position: center !important;
+
+        /* Apply filter to darken the image */
+        filter: brightness(0.5) !important; 
     }
 }
