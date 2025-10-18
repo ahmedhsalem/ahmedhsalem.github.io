@@ -47,7 +47,7 @@ sections:
   - block: cta-button-list
     content:
       title: "The Respiratory Rate Problem"
-      text: "Respiratory rate is often overlooked, leaving early signs of deterioration undetected. Continuous monitoring is critical for timely intervention."
+      text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
       buttons:
         - text: "Manual Checks Are Error-Prone"
           url: "#"
@@ -59,10 +59,10 @@ sections:
           url: "#"
           icon: "eye-slash"
     design:
-      columns: "3"
+      css_class: "rf-cta-problem"   # <- important: used by custom CSS
       background:
-        color: "#001F3F" # Navy background
-        text_color: "#FFFFFF" # White text for readability
+        color: "#FFFFFF"            # block background white
+        text_color: "#001F3F"  
 
   # ---------------------------
   # STATS BLOCK
