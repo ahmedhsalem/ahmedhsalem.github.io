@@ -44,25 +44,28 @@ sections:
   # MARKDOWN - Respiratory Rate Problem
   # ---------------------------
 
-  - block: cta-button-list
+  - title: "The Respiratory Rate Problem"
+  text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
+  block: cta-button-list
     content:
-      title: "The Respiratory Rate Problem"
-      text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
       buttons:
         - text: "Manual Checks Are Error-Prone"
-          url: ""
+          url: ""          # empty URL disables navigation
           icon: "exclamation-triangle"
+          disabled: true   # optional, only works if template reads it
         - text: "Existing Sensors Are Intrusive"
           url: ""
           icon: "x-circle"
+          disabled: true
         - text: "Subtle Changes Go Unnoticed"
           url: ""
           icon: "eye-slash"
+          disabled: true
     design:
-      css_class: "rf-cta-problem"   # <- important: used by custom CSS
+      css_class: "rf-cta-problem"
       background:
-        color: "#FFFFFF"            # block background white
-        text_color: "#001F3F"  
+        color: "#FFFFFF"
+        text_color: "#00043f"
 
   # ---------------------------
   # STATS BLOCK
