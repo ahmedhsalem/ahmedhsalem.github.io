@@ -43,16 +43,15 @@ sections:
   # ---------------------------
   # MARKDOWN - Respiratory Rate Problem
   # ---------------------------
-
   - title: "The Respiratory Rate Problem"
-  text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
-  block: cta-button-list
+    text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
+    block: cta-button-list
     content:
       buttons:
         - text: "Manual Checks Are Error-Prone"
           url: ""          # empty URL disables navigation
           icon: "exclamation-triangle"
-          disabled: true   # optional, only works if template reads it
+          disabled: true
         - text: "Existing Sensors Are Intrusive"
           url: ""
           icon: "x-circle"
