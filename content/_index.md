@@ -86,24 +86,6 @@ sections:
             Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs.
 
   # ---------------------------
-  # IMPACT
-  # ---------------------------
-  - block: cta-image-paragraph
-    id: impact
-    content:
-      items:
-        - title: "Transforming Patient Care with RespiraFibre"
-          text: |
-            RespiraFibre’s continuous respiratory monitoring enables hospitals to intervene earlier, reduce critical events, and improve patient outcomes. By integrating seamlessly into hospital workflows, it empowers clinicians and protects patients.
-          feature_icon: check
-          features:
-            - "Reduced ICU Admissions: Continuous monitoring allows early interventions, preventing deterioration that requires ICU care."
-            - "Shorter Hospital Stay: Early detection lowers average length of stay, freeing beds and reducing hospital costs."
-            - "Lives Saved: Timely alerts help clinicians act sooner, preventing complications and saving lives."
-            - "Staff Efficiency: Reduces emergency events and false alarms, allowing staff to focus on patient care."
-          video: Interface.mp4
-
-  # ---------------------------
   # TESTIMONIALS
   # ---------------------------
   - block: testimonials
