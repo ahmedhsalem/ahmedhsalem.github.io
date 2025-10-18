@@ -45,11 +45,10 @@ sections:
   # ---------------------------
   # ButtonList - Respiratory Rate Problem
   # ---------------------------
-  
   - block: cta-button-list
-  - id: Problem
+    id: Problem
     content:
-      title: "The Respiratory Rate Problem""
+      title: "The Respiratory Rate Problem"
       text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
       buttons:
         - text: "Manual Checks are Error-Prone"
@@ -65,7 +64,6 @@ sections:
       columns: "1"
       background:
         color: "blue-50"
----
 
   # ---------------------------
   # STATS BLOCK
