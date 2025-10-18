@@ -7,39 +7,39 @@ design:
   spacing: "6rem"
 
 sections:
-- block: hero
-  content:
-    title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-    text: "Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration."
-    primary_action:
-      text: Learn More
-      url: "#solution"
-      icon: heart
-    secondary_action:
-      text: Contact Us
-      url: "/contact"
-  design:
-    css_class: "rf-hero-bg dark"
-    css_style: |
-      /* Default background for desktop */
-      .rf-hero-bg {
-        background-image: url('/images/WebsitePage_Image.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      /* Mobile-specific background */
-      @media (max-width: 820px) {
+  - block: hero
+    content:
+      title: "RespiraFibre: Measuring Every Breath, Saving Lives"
+      text: "Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration."
+      primary_action:
+        text: Learn More
+        url: "#solution"
+        icon: heart
+      secondary_action:
+        text: Contact Us
+        url: "/contact"
+    design:
+      css_class: "rf-hero-bg dark"
+      css_style: |
+        /* Default background for desktop */
         .rf-hero-bg {
-          background-image: url('/images/WebsitePage_Image_Phone.png');
+          background-image: url('/images/WebsitePage_Image.png');
           background-size: cover;
           background-position: center;
+          background-repeat: no-repeat;
         }
-      }
-
-    background:
-      color: "navy"
+  
+        /* Mobile-specific background */
+        @media (max-width: 820px) {
+          .rf-hero-bg {
+            background-image: url('/images/WebsitePage_Image_Phone.png');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+  
+      background:
+        color: "navy"
 
 
   # ---------------------------
