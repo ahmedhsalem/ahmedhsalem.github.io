@@ -4,7 +4,7 @@ date: 2025-10-18
 type: landing
 
 design:
-  spacing: "3rem"
+  spacing: "4rem"  # default spacing for all sections except Hero
 
 sections:
   # ---------------------------
@@ -24,7 +24,7 @@ sections:
     design:
       css_class: "rf-hero-bg dark"
       spacing:
-        padding: ["1.5rem", 0, "1.5rem", 0]
+        padding: ["2rem", 0, "2rem", 0]  # Hero gets extra padding
       background:
         color: "navy"
         image:
@@ -45,23 +45,14 @@ sections:
   # ---------------------------
   # MARKDOWN - Respiratory Rate Problem
   # ---------------------------
-  - title: "The Respiratory Rate Problem"
-    text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
-    block: cta-button-list
+  - block: cta-button-list
     content:
-      buttons:
-        - text: "Manual Checks Are Error-Prone"
-          url: ""          # empty URL disables navigation
-          icon: "exclamation-triangle"
-          disabled: true
-        - text: "Existing Sensors Are Intrusive"
-          url: ""
-          icon: "x-circle"
-          disabled: true
-        - text: "Subtle Changes Go Unnoticed"
-          url: ""
-          icon: "eye-slash"
-          disabled: true
+      title: "<h2>The Respiratory Rate Problem</h2>"
+      text: "<p>Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention.</p>"
+      buttons_html: |
+        <button type="button" class="cta-btn"><i class="exclamation-triangle"></i> Manual Checks Are Error-Prone</button>
+        <button type="button" class="cta-btn"><i class="x-circle"></i> Existing Sensors Are Intrusive</button>
+        <button type="button" class="cta-btn"><i class="eye-slash"></i> Subtle Changes Go Unnoticed</button>
     design:
       css_class: "rf-cta-problem"
       background:
@@ -128,7 +119,7 @@ sections:
           text: "A valid, reliable and autonomous source of respiratory rate data would be enormously valuable"
     design:
       spacing:
-        padding: ["6rem", 0, 0, 0]
+        padding: ["3rem", 0, "3rem", 0]
 
   # ---------------------------
   # CTA CARD
