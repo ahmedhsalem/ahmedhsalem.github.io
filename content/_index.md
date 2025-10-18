@@ -101,7 +101,7 @@ sections:
             - "Shorter Hospital Stay: Early detection lowers average length of stay, freeing beds and reducing hospital costs."
             - "Lives Saved: Timely alerts help clinicians act sooner, preventing complications and saving lives."
             - "Staff Efficiency: Reduces emergency events and false alarms, allowing staff to focus on patient care."
-          image: build-website.png
+          video: Interface.mp4
 
   # ---------------------------
   # TESTIMONIALS
