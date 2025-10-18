@@ -23,8 +23,7 @@ sections:
             url: "#solution"
           image: "WebsitePage_Image_Phone.png"
     design:
-      # ESSENTIAL CLASS KEPT for mobile visibility
-      css_class: "only-mobile rf-hero-img" 
+      css_class: "only-mobile rf-hero-img"
       spacing:
         padding: ["1.5rem", 0, "1.5rem", 0]
 
@@ -34,21 +33,16 @@ sections:
   - block: hero
     content:
       title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      # FIX: Using '>-' and placing text immediately after </style> to fix formatting,
-      # with only the essential visibility CSS inside the style block.
       text: >-
         <style>
-        /* Strong page-level override to ensure mobile/desktop visibility */
         .only-desktop { display: block !important; }
         .only-mobile { display: none !important; }
 
-        /* Show mobile block on phones, hide desktop */
         @media (max-width: 820px) {
           .only-desktop { display: none !important; }
-          .only-mobile { display: block !important; }
+          .only-mobile  { display: block !important; }
         }
 
-        /* Desktop safety */
         @media (min-width: 821px) {
           .only-desktop.rf-hero-bg {
             background-size: cover !important;
@@ -64,7 +58,6 @@ sections:
         text: Contact Us
         url: "/contact"
     design:
-      # ESSENTIAL CLASS KEPT for desktop visibility
       css_class: "only-desktop dark rf-hero-bg"
       background:
         color: "navy"
@@ -75,6 +68,9 @@ sections:
           position: center
           size: cover
 
+  # ---------------------------
+  # STATS BLOCK (with inline style overrides)
+  # ---------------------------
   - block: stats
     content:
       items:
@@ -92,9 +88,31 @@ sections:
             from adoption
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
+      css_style: |
+        /* Inline style override for smaller fonts in stats block */
+        h6 {
+          font-size: 1.5rem !important;
+          line-height: 1.2 !important;
+        }
+        p {
+          font-size: 0.85rem !important;
+          line-height: 1.1 !important;
+          margin-top: 0.25rem !important;
+        }
+        @media (max-width: 820px) {
+          h6 {
+            font-size: 1.2rem !important;
+          }
+          p {
+            font-size: 0.75rem !important;
+          }
+        }
       spacing:
         padding: ["1rem", 0, "1rem", 0]
 
+  # ---------------------------
+  # FEATURES
+  # ---------------------------
   - block: features
     id: solution
     content:
@@ -118,6 +136,9 @@ sections:
           description: |
             Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
 
+  # ---------------------------
+  # IMPACT
+  # ---------------------------
   - block: cta-image-paragraph
     id: impact
     content:
@@ -135,6 +156,9 @@ sections:
             text: Learn About Our Technology
             url: "/technology"
 
+  # ---------------------------
+  # TESTIMONIALS
+  # ---------------------------
   - block: testimonials
     content:
       title: "What Clinicians Say:"
@@ -147,6 +171,9 @@ sections:
       spacing:
         padding: ["6rem", 0, 0, 0]
 
+  # ---------------------------
+  # CTA CARD
+  # ---------------------------
   - block: cta-card
     content:
       title: "Join Us in Transforming Respiratory Care"
