@@ -31,7 +31,7 @@ sections:
         css_style: |
           @media (max-width: 820px) {
             .rf-hero-bg {
-              background-image: url('{{ "media/WebsitePage_Image_Phone.png" | relURL }}') !important;
+              background-image: url('/media/WebsitePage_Image_Phone.png') !important;
               background-size: contain !important;
               background-position: right !important;
             }
