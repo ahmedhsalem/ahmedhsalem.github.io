@@ -131,18 +131,10 @@ sections:
             RespiraFibre’s continuous respiratory monitoring enables hospitals to intervene earlier, reduce critical events, and improve patient outcomes. By integrating seamlessly into hospital workflows, it empowers clinicians and protects patients.
           feature_icon: check
           features:
-            - title: "Reduced ICU Admissions"
-              icon: shield
-              description: "Continuous monitoring allows early interventions, preventing deterioration that requires ICU care."
-            - title: "Shorter Hospital Stay"
-              icon: clock
-              description: "Early detection lowers average length of stay, freeing beds and reducing hospital costs."
-            - title: "Lives Saved"
-              icon: heart
-              description: "Timely alerts help clinicians act sooner, preventing complications and saving lives."
-            - title: "Staff Efficiency"
-              icon: user-group
-              description: "Reduces emergency events and false alarms, allowing staff to focus on patient care."
+            - "Reduced ICU Admissions: Continuous monitoring allows early interventions, preventing deterioration that requires ICU care."
+            - "Shorter Hospital Stay: Early detection lowers average length of stay, freeing beds and reducing hospital costs."
+            - "Lives Saved: Timely alerts help clinicians act sooner, preventing complications and saving lives."
+            - "Staff Efficiency: Reduces emergency events and false alarms, allowing staff to focus on patient care."
           image: build-website.png
 
   # ---------------------------
