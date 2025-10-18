@@ -25,7 +25,7 @@ sections:
           image:
             filename: "WebsitePage_Image_Phone.png"
             position: center
-            size: cover
+            size: contain
 
   # ---------------------------
   # STATS BLOCK
