@@ -4,27 +4,25 @@ date: 2025-10-18
 type: landing
 
 design:
-  spacing: "4rem"  # default spacing for all sections except Hero
+  spacing: "3rem"
 
 sections:
-  # ---------------------------
-  # HERO
-  # ---------------------------
   - block: hero
+    id: top
     content:
-      title: "RespiraFibre: Measuring Every Breath, Saving Lives"
-      text: "Revolutionary nanotechnology transforms oxygen masks and nasal cannulae into life-saving sensors — continuous, unobtrusive respiratory monitoring for earlier detection of patient deterioration."
+      title: "Continuous breathing visibility for ward teams"
+      text: "RespiraFibre is designed to add continuous breathing waveform monitoring to routine oxygen-delivery and respiratory interfaces, helping teams notice meaningful change sooner within existing workflows."
       primary_action:
-        text: Learn More
-        url: "#solution"
-        icon: heart
+        text: See how it works
+        url: "#how-it-works"
+        icon: chart-bar
       secondary_action:
-        text: Contact Us
+        text: Talk to the team
         url: "/contact"
     design:
-      css_class: "rf-hero-bg dark"
+      css_class: "rf-hero-bg dark rf-section"
       spacing:
-        padding: ["2rem", 0, "2rem", 0]  # Hero gets extra padding
+        padding: ["2rem", 0, "2rem", 0]
       background:
         color: "navy"
         image:
@@ -32,112 +30,117 @@ sections:
           position: center
           size: cover
           filters:
-            brightness: 0.5
-    css_style: |
-      @media (max-width: 820px) {
-        section.rf-hero-bg {
-          background-image: url('/media/WebsitePage_Image_Phone.png') !important;
-          background-size: cover !important;
-          background-position: center !important;
-        }
-      }
+            brightness: 0.45
 
-  # ---------------------------
-  # ButtonList - Respiratory Rate Problem
-  # ---------------------------
-  - block: cta-button-list
-    id: Problem
+  - block: markdown
+    id: value-points
     content:
-      title: "The Respiratory Rate Problem"
-      text: "Respiratory rate is often overlooked. Continuous monitoring is critical for timely intervention."
-      disable_click: true 
+      title: "Why this matters"
+      text: |
+        - **Intermittent manual checks** can miss short-lived changes between observations.
+        - **Documentation burden** can pull attention away from bedside care.
+        - **Alarm-heavy environments** can make subtle respiratory trends harder to spot.
+    design:
+      css_class: "rf-section"
+      background:
+        color: "gray-50"
+
+  - block: cta-button-list
+    id: pain-points
+    content:
+      title: "Common workflow pain points"
+      text: "Select a topic to jump to a concise explanation."
       buttons:
-        - text: "Manual Checks are Error-Prone"
-          url: "#Problem"
+        - text: "Manual checks are error-prone"
+          url: "#pain-manual-checks"
           icon: "exclamation-triangle"
-        - text: "Existing Sensors are Intrusive"
-          url: "#Problem"
-          icon: "x-circle"
-        - text: "Subtle Changes Go Unnoticed"
-          url: "#Problem"
+        - text: "Subtle changes can be missed"
+          url: "#pain-subtle-changes"
           icon: "eye-slash"
+        - text: "Documentation burden adds friction"
+          url: "#pain-documentation"
+          icon: "clipboard-document-list"
     design:
       columns: "1"
+      css_class: "rf-section"
+
+  - block: markdown
+    id: pain-details
+    content:
+      title: "At-a-glance context"
+      text: |
+        ### <span id="pain-manual-checks">Manual checks are error-prone</span>
+        Spot checks are useful, but they can vary by timing, technique, and workload pressure.
+
+        ### <span id="pain-subtle-changes">Subtle changes can be missed</span>
+        Breathing patterns can shift gradually. Without continuous context, trend changes may be harder to identify early.
+
+        ### <span id="pain-documentation">Documentation burden adds friction</span>
+        Repeated manual recording can add cognitive and administrative load across busy shifts.
+    design:
+      css_class: "rf-section"
       background:
         color: "blue-50"
 
-  # ---------------------------
-  # STATS BLOCK
-  # ---------------------------
-  - block: stats
-    content:
-      items:
-        - statistic: "70%"
-          description: "of respiratory rate measurements are inaccurate"
-        - statistic: "7,964"
-          description: "UK deaths annually from missed patient deterioration"
-        - statistic: "£1.2B"
-          description: "Potential NHS annual savings from adoption"
-
-  # ---------------------------
-  # FEATURES
-  # ---------------------------
   - block: features
-    id: solution
+    id: how-it-works
     content:
-      title: "Our Solution"
-      text: "Ultra-sensitive nanotechnology fibres embedded into oxygen-delivery devices for accurate, continuous respiratory monitoring."
+      title: "How it works"
+      text: "A pragmatic three-step model designed for clinical environments."
       items:
-        - name: Imperceptible Sensors
-          icon: heart
-          description: |
-            Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption.
-        - name: Real-Time Data
-          icon: wifi
-          description: |
-            A lightweight reusable node wirelessly transmits high-fidelity breathing data to secure hospital systems (e.g. EPIC).
-        - name: AI-Powered Insights
-          icon: sparkles
-          description: |
-            Enables earlier detection of deterioration, with future expansion to classify cough, speech, and shortness of breath.
-        - name: Sustainable Design
-          icon: bolt
-          description: |
-            Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
-        - name: Reduced ICU Admissions
-          icon: "custom/shield"
-          description: |
-            Continuous monitoring allows earlier intervention, helping to reduce ICU admissions and improve patient outcomes.
-        - name: Shorter Hospital Stay
-          icon: clock
-          description: |
-            Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs.
-
-  # ---------------------------
-  # TESTIMONIALS
-  # ---------------------------
-  - block: testimonials
-    content:
-      title: "What Clinicians Say:"
-      items:
-        - name: "Prof. Ramani Moonesinghe"
-          role: "NHS England Interim Director of Patient Safety"
-          image: "RamaniMoonesinghe.jpg.webp"
-          text: "A valid, reliable and autonomous source of respiratory rate data would be enormously valuable"
+        - name: "1) Integrates into existing interfaces"
+          icon: "link"
+          description: "Designed to fit oxygen-delivery and respiratory interfaces already used in routine care pathways."
+        - name: "2) Captures breathing waveform continuously"
+          icon: "activity"
+          description: "Breathing waveform data is collected continuously to provide richer context than intermittent spot checks alone."
+        - name: "3) Surfaces pattern changes"
+          icon: "chart-bar"
+          description: "An analytics layer is designed to surface notable changes in breathing patterns for clinical review."
     design:
-      spacing:
-        padding: ["3rem", 0, "3rem", 0]
+      css_class: "rf-section"
 
-  # ---------------------------
-  # CTA CARD
-  # ---------------------------
-  - block: cta-card
+  - block: markdown
+    id: credibility
     content:
-      title: "Join Us in Transforming Respiratory Care"
+      title: "Built for real-world adoption"
       text: |
-        RespiraFibre is redefining patient monitoring — improving outcomes, supporting clinicians, and enabling a new era of digital health.
+        <div class="rf-credibility-grid">
+          <div class="rf-pill">Built with clinicians</div>
+          <div class="rf-pill">Designed for ward workflows</div>
+          <div class="rf-pill">Data governance minded</div>
+        </div>
+
+        <div class="rf-placeholder-row">
+          <div class="rf-placeholder-card">Partner logo placeholder</div>
+          <div class="rf-placeholder-card">Clinical testimonial placeholder</div>
+          <div class="rf-placeholder-card">Pilot site placeholder</div>
+        </div>
+    design:
+      css_class: "rf-section"
+      background:
+        color: "gray-50"
+
+  - block: markdown
+    id: use-cases
+    content:
+      title: "Initial focus areas"
+      text: |
+        <div class="rf-use-cases">
+          <div class="rf-use-case">Wards</div>
+          <div class="rf-use-case">Step-down units</div>
+          <div class="rf-use-case">Post-op recovery</div>
+        </div>
+    design:
+      css_class: "rf-section"
+
+  - block: cta-card
+    id: contact-cta
+    content:
+      title: "Explore collaboration"
+      text: "We are engaging clinical partners, pilot sites, and strategic collaborators to shape development priorities and deployment pathways."
       button:
-        text: Get Involved
+        text: "Start a conversation"
         url: "/contact"
     design:
       card:
