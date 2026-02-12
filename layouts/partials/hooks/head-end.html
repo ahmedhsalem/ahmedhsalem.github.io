@@ -1,9 +1,10 @@
-{{/* layouts/partials/hooks/head-end.html
-   This runs at the end of the <head> (HugoBlox hook).
-   It safely loads assets/css/custom.css if present.
-*/}}
-
+{{/* layouts/partials/hooks/head-end.html */}}
 {{ with resources.Get "css/custom.css" }}
   {{ $custom := . | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $custom.Permalink }}" integrity="{{ $custom.Data.Integrity }}">
+{{ end }}
+
+{{ with resources.Get "js/custom.js" }}
+  {{ $customJS := . | minify | fingerprint }}
+  <script defer src="{{ $customJS.Permalink }}" integrity="{{ $customJS.Data.Integrity }}"></script>
 {{ end }}
