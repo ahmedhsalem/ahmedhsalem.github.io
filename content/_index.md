@@ -7,11 +7,12 @@ design:
   spacing: "3rem"
 
 sections:
+  # 1. The Problem: Hero + Why this matters
   - block: hero
     id: top
     content:
-      title: "Continuous breathing visibility for ward teams"
-      text: "RespiraFibre is designed to add continuous breathing waveform monitoring to routine oxygen-delivery and respiratory interfaces, helping teams notice meaningful change sooner within existing workflows."
+      title: "Respiratory Nanotechnology For Continuous Monitoring"
+      text: "RespiraFibre uses a 9‑micrometre nanotechnology sensor to add continuous breathing waveform monitoring to routine oxygen-delivery and respiratory interfaces, helping teams notice meaningful change sooner within existing workflows."
       primary_action:
         text: See how it works
         url: "#how-it-works"
@@ -37,19 +38,43 @@ sections:
     content:
       title: "Why this matters"
       text: |
-        - **Intermittent manual checks** can miss short-lived changes between observations.
-        - **Documentation burden** can pull attention away from bedside care.
-        - **Alarm-heavy environments** can make subtle respiratory trends harder to spot.
+        <div class="rf-value-grid grid-container">
+          <div class="rf-pill rf-value-stat">
+            <div class="rf-value-stat-number">70%</div>
+            <div class="rf-value-stat-label text-sm text-slate-600">Inaccuracy rate in traditional intermittent manual RR monitoring.</div>
+          </div>
+          <div class="rf-pill rf-value-stat">
+            <div class="rf-value-stat-number">250K+</div>
+            <div class="rf-value-stat-label text-sm text-slate-600">Annual preventable global hospital deaths due to late deterioration.</div>
+          </div>
+          <div class="rf-pill rf-value-stat">
+            <div class="rf-value-stat-number">$30B+</div>
+            <div class="rf-value-stat-label text-sm text-slate-600">Potential global healthcare savings through reduced ICU admissions.</div>
+          </div>
+          <div class="rf-pill rf-value-insight">
+            <div><strong>Direct Source Sensing</strong></div>
+            <div class="text-sm text-slate-600">Move beyond motion‑artifacts of SpO₂ and ECG. Our nanotechnology captures breathing directly at the source.</div>
+          </div>
+          <div class="rf-pill rf-value-insight">
+            <div><strong>Predictive Recognition</strong></div>
+            <div class="text-sm text-slate-600">Analyze high‑res waveform morphology to surface markers of distress before alarms trigger.</div>
+          </div>
+          <div class="rf-pill rf-value-insight">
+            <div><strong>Closing the Gap</strong></div>
+            <div class="text-sm text-slate-600">Provide clinical‑grade visibility during high‑risk periods when staff are away from the bedside.</div>
+          </div>
+        </div>
     design:
       css_class: "rf-section"
       background:
         color: "gray-50"
 
+  # 2. Pain Points: static cards
   - block: cta-button-list
     id: pain-points
     content:
-      title: "Common workflow pain points"
-      text: "Select a topic to jump to a concise explanation."
+      title: ""
+      text: ""
       buttons:
         - text: "Manual checks are error-prone"
           url: "#pain-manual-checks"
@@ -64,76 +89,67 @@ sections:
       columns: "1"
       css_class: "rf-section"
 
-  - block: markdown
-    id: pain-details
+  # 3. Our Solution: outcomes + architecture
+  - block: features
+    id: solution
     content:
-      title: "At-a-glance context"
-      text: |
-        ### <span id="pain-manual-checks">Manual checks are error-prone</span>
-        Spot checks are useful, but they can vary by timing, technique, and workload pressure.
-
-        ### <span id="pain-subtle-changes">Subtle changes can be missed</span>
-        Breathing patterns can shift gradually. Without continuous context, trend changes may be harder to identify early.
-
-        ### <span id="pain-documentation">Documentation burden adds friction</span>
-        Repeated manual recording can add cognitive and administrative load across busy shifts.
+      title: "Our Solution"
+      text: "Ultra-sensitive nanotechnology fibres embedded into oxygen-delivery devices for accurate, continuous respiratory monitoring."
+      items:
+        - name: "Imperceptible Sensors"
+          icon: "microchip"
+          description: "Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption."
+        - name: "Real-Time Data"
+          icon: "wifi"
+          description: "A lightweight reusable node wirelessly transmits high-fidelity breathing data to secure hospital systems (e.g. EPIC)."
+        - name: "AI-Powered Insights"
+          icon: "brain"
+          description: "Enables earlier detection of deterioration, with future expansion to classify cough, speech, and shortness of breath."
+        - name: "Sustainable Design"
+          icon: "leaf"
+          description: "Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally."
+        - name: "Reduced ICU Admissions"
+          icon: "shield-virus"
+          description: "Continuous monitoring allows earlier intervention, helping to reduce ICU admissions and improve patient outcomes."
+        - name: "Shorter Hospital Stay"
+          icon: "clock"
+          description: "Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs."
     design:
       css_class: "rf-section"
-      background:
-        color: "blue-50"
 
+  # 4. How it works: 3-step model
   - block: features
     id: how-it-works
     content:
       title: "How it works"
-      text: "A pragmatic three-step model designed for clinical environments."
+      text: "A three-step nanotechnology and Edge‑to‑Cloud architecture designed for high‑stakes clinical monitoring."
       items:
-        - name: "1) Integrates into existing interfaces"
+        - name: "1) Universal Interface Integration"
           icon: "link"
-          description: "Designed to fit oxygen-delivery and respiratory interfaces already used in routine care pathways."
-        - name: "2) Captures breathing waveform continuously"
-          icon: "activity"
-          description: "Breathing waveform data is collected continuously to provide richer context than intermittent spot checks alone."
-        - name: "3) Surfaces pattern changes"
+          description: "Our humidity‑responsive fibre is pre‑integrated into standard nasal cannulas and masks. No new wearables, no skin‑perfusion issues—just seamless sensing within existing routine workflows."
+        - name: "2) Direct-Source Waveform Capture"
+          icon: "signal"
+          description: "By sensing directly at the nose and mouth, we eliminate the motion noise that plagues SpO₂‑derived monitoring. The result is a clean, motion‑tolerant respiratory waveform with a high signal‑to‑noise ratio."
+        - name: "3) Edge-to-Cloud Intelligence"
           icon: "chart-bar"
-          description: "An analytics layer is designed to surface notable changes in breathing patterns for clinical review."
+          description: "Real‑time data is processed through our Edge+Cloud architecture, applying predictive analytics to surface pattern changes and alerting staff via a centralized UI before clinical deterioration escalates."
     design:
       css_class: "rf-section"
 
-  - block: markdown
-    id: credibility
+  # 5. Testimonials
+  - block: testimonials
     content:
-      title: "Built for real-world adoption"
-      text: |
-        <div class="rf-credibility-grid">
-          <div class="rf-pill">Built with clinicians</div>
-          <div class="rf-pill">Designed for ward workflows</div>
-          <div class="rf-pill">Data governance minded</div>
-        </div>
-
-        <div class="rf-placeholder-row">
-          <div class="rf-placeholder-card">Partner logo placeholder</div>
-          <div class="rf-placeholder-card">Clinical testimonial placeholder</div>
-          <div class="rf-placeholder-card">Pilot site placeholder</div>
-        </div>
+      title: "What Clinicians Say:"
+      items:
+        - name: "Prof. Ramani Moonesinghe"
+          role: "NHS England Interim Director of Patient Safety"
+          image: "RamaniMoonesinghe.jpg.webp"
+          text: "A valid, reliable and autonomous source of respiratory rate data would be enormously valuable"
     design:
-      css_class: "rf-section"
-      background:
-        color: "gray-50"
+      spacing:
+        padding: ["3rem", 0, "3rem", 0]
 
-  - block: markdown
-    id: use-cases
-    content:
-      title: "Initial focus areas"
-      text: |
-        <div class="rf-use-cases">
-          <div class="rf-use-case">Wards</div>
-          <div class="rf-use-case">Step-down units</div>
-          <div class="rf-use-case">Post-op recovery</div>
-        </div>
-    design:
-      css_class: "rf-section"
-
+  # 6. Explore collaboration
   - block: cta-card
     id: contact-cta
     content:
