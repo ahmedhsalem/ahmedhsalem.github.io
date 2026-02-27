@@ -96,24 +96,30 @@ sections:
       title: "Our Solution"
       text: "Ultra-sensitive nanotechnology fibres embedded into oxygen-delivery devices for accurate, continuous respiratory monitoring."
       items:
-        - name: "Imperceptible Sensors"
-          icon: "microchip"
-          description: "Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption."
-        - name: "Real-Time Data"
-          icon: "wifi"
-          description: "A lightweight reusable node wirelessly transmits high-fidelity breathing data to secure hospital systems (e.g. EPIC)."
-        - name: "AI-Powered Insights"
-          icon: "brain"
-          description: "Enables earlier detection of deterioration, with future expansion to classify cough, speech, and shortness of breath."
-        - name: "Sustainable Design"
-          icon: "leaf"
-          description: "Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally."
-        - name: "Reduced ICU Admissions"
-          icon: "shield-virus"
-          description: "Continuous monitoring allows earlier intervention, helping to reduce ICU admissions and improve patient outcomes."
-        - name: "Shorter Hospital Stay"
-          icon: "clock"
-          description: "Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs."
+        - name: Imperceptible Sensors
+          icon: heart
+          description: |
+            Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption.
+        - name: Real-Time Data
+          icon: wifi
+          description: |
+            A lightweight reusable node wirelessly transmits high-fidelity breathing data to secure hospital systems (e.g. EPIC).
+        - name: AI-Powered Insights
+          icon: sparkles
+          description: |
+            Enables earlier detection of deterioration, with future expansion to classify cough, speech, and shortness of breath.
+        - name: Sustainable Design
+          icon: bolt
+          description: |
+            Disposable sensors with reusable modules — ultra-low cost, zero electronic waste, scalable globally.
+        - name: Reduced ICU Admissions
+          icon: "custom/shield"
+          description: |
+            Continuous monitoring allows earlier intervention, helping to reduce ICU admissions and improve patient outcomes.
+        - name: Shorter Hospital Stay
+          icon: clock
+          description: |
+            Early detection of deterioration can lower average length of stay (LoS), freeing beds and reducing costs.
     design:
       css_class: "rf-section"
 

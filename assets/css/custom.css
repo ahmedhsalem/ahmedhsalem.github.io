@@ -57,6 +57,7 @@ section.rf-hero-bg::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0.5;
   background:
     radial-gradient(
       circle at 10% 0%,
@@ -69,18 +70,29 @@ section.rf-hero-bg::before {
       transparent 55%
     );
   mix-blend-mode: screen;
-  opacity: 0.9;
+  opacity: 0.7;
   pointer-events: none;
 }
 
-section.rf-hero-bg > * {
+/* Keep hero background image layer visible and behind overlay + content */
+section.rf-hero-bg .home-section-bg {
+  z-index: 0 !important;
+}
+
+section.rf-hero-bg > *:not(.home-section-bg) {
   position: relative;
   z-index: 1;
 }
 
-/* Mobile-specific hero image */
-@media (max-width: 820px) {
+/* Mobile/narrow viewport: switch hero to phone image when window is small
+   (resize or real phone). Override both section and the theme’s .home-section-bg div. */
+@media (max-width: 992px) {
   section.rf-hero-bg {
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  section.rf-hero-bg .home-section-bg.bg-image {
     background-image: url("/media/WebsitePage_Image_Phone.png") !important;
     background-size: cover !important;
     background-position: center !important;
