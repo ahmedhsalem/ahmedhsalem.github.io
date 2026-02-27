@@ -16,33 +16,16 @@
   </p>
 {{ end }}
 
-<div class="rf-cta-list flex items-center flex-col mx-auto w-full justify-center mt-4 px-6 pb-5">
+<div class="rf-cta-list flex items-center flex-col mx-auto w-full justify-center mt-4 px-6 pb-5" role="list" aria-label="Pain points">
   {{ $buttons := $block.content.buttons | default (or $block.Params.buttons $block.buttons) }}
   {{ range $buttons }}
-    {{ $target := .url | default "" }}
-    {{ if hasPrefix $target "#" }}
-      <button
-        type="button"
-        class="rf-cta-button"
-        data-scroll-target="{{ $target }}"
-        aria-label="Jump to {{ .text }}"
-      >
-        <span class="rf-cta-icon" aria-hidden="true">
-          {{ with .icon }}
-            {{ partial "functions/get_icon" (dict "name" . "attributes" "height=\"24\" width=\"24\"") }}
-          {{ end }}
-        </span>
-        <span class="rf-cta-text">{{ .text | markdownify | emojify }}</span>
-      </button>
-    {{ else }}
-      <a href="{{ $target }}" class="rf-cta-button rf-cta-link" aria-label="Go to {{ .text }}">
-        <span class="rf-cta-icon" aria-hidden="true">
-          {{ with .icon }}
-            {{ partial "functions/get_icon" (dict "name" . "attributes" "height=\"24\" width=\"24\"") }}
-          {{ end }}
-        </span>
-        <span class="rf-cta-text">{{ .text | markdownify | emojify }}</span>
-      </a>
-    {{ end }}
+    <div class="rf-cta-button" role="listitem" aria-label="{{ .text }}">
+      <span class="rf-cta-icon" aria-hidden="true">
+        {{ with .icon }}
+          {{ partial "functions/get_icon" (dict "name" . "attributes" "height=\"24\" width=\"24\"") }}
+        {{ end }}
+      </span>
+      <span class="rf-cta-text">{{ .text | markdownify | emojify }}</span>
+    </div>
   {{ end }}
 </div>
