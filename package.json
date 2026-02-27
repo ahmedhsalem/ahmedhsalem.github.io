@@ -10,7 +10,22 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
-    "@tailwindcss/typography": "^0.5.10",
-    "tailwindcss": "^4.1.12"
+    "@tailwindcss/typography": "^0.5.10"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedhsalem/ahmedhsalem.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ahmedhsalem/ahmedhsalem.github.io/issues"
+  },
+  "homepage": "https://github.com/ahmedhsalem/ahmedhsalem.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.2.1"
   }
 }
