@@ -4,6 +4,42 @@
   <link rel="stylesheet" href="{{ $custom.Permalink }}" integrity="{{ $custom.Data.Integrity }}">
 {{ end }}
 
+{{/* Inline mobile hero: target section by class so it applies to the hero block only */}}
+<style id="rf-mobile-hero">
+@media (max-width: 992px) {
+  section.blox-hero.rf-hero-bg, .page-body > section.rf-hero-bg {
+    background-color: #001f3f !important;
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 75vh;
+  }
+  section.blox-hero.rf-hero-bg .home-section-bg, .page-body > section.rf-hero-bg .home-section-bg {
+    background-color: transparent !important;
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: scroll !important;
+    filter: brightness(0.45) !important;
+  }
+  section.blox-hero.rf-hero-bg::before, .page-body > section.rf-hero-bg::before { opacity: 0.4; }
+}
+@media (max-width: 768px) {
+  section.blox-hero.rf-hero-bg, .page-body > section.rf-hero-bg {
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-attachment: scroll !important;
+  }
+  section.blox-hero.rf-hero-bg .home-section-bg, .page-body > section.rf-hero-bg .home-section-bg {
+    background-color: transparent !important;
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-attachment: scroll !important;
+    filter: brightness(0.45) !important;
+  }
+}
+</style>
+
 {{ with resources.Get "js/custom.js" }}
   {{ $customJS := . | minify | fingerprint }}
   <script defer src="{{ $customJS.Permalink }}" integrity="{{ $customJS.Data.Integrity }}"></script>

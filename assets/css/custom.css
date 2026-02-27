@@ -84,18 +84,45 @@ section.rf-hero-bg > *:not(.home-section-bg) {
   z-index: 1;
 }
 
-/* Mobile/narrow viewport: switch hero to phone image when window is small
-   (resize or real phone). Override both section and the theme’s .home-section-bg div. */
+/* Mobile hero: phone image. Target hero section by class (body also has id=top). */
 @media (max-width: 992px) {
-  section.rf-hero-bg {
+  section.blox-hero.rf-hero-bg,
+  .page-body > section.rf-hero-bg {
+    background-color: #001f3f !important;
     background-image: url("/media/WebsitePage_Image_Phone.png") !important;
     background-size: cover !important;
     background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 75vh;
   }
-  section.rf-hero-bg .home-section-bg.bg-image {
+  section.blox-hero.rf-hero-bg .home-section-bg,
+  .page-body > section.rf-hero-bg .home-section-bg {
+    background-color: transparent !important;
     background-image: url("/media/WebsitePage_Image_Phone.png") !important;
     background-size: cover !important;
     background-position: center !important;
+    background-attachment: scroll !important;
+    filter: brightness(0.45) !important;
+    -webkit-filter: brightness(0.45) !important;
+  }
+  section.blox-hero.rf-hero-bg::before,
+  .page-body > section.rf-hero-bg::before {
+    opacity: 0.4;
+  }
+}
+@media (max-width: 768px) {
+  section.blox-hero.rf-hero-bg,
+  .page-body > section.rf-hero-bg {
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-attachment: scroll !important;
+  }
+  section.blox-hero.rf-hero-bg .home-section-bg,
+  .page-body > section.rf-hero-bg .home-section-bg {
+    background-color: transparent !important;
+    background-image: url("/media/WebsitePage_Image_Phone.png") !important;
+    background-attachment: scroll !important;
+    filter: brightness(0.45) !important;
   }
 }
 
