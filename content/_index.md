@@ -50,7 +50,7 @@ sections:
           </div>
           <div class="rf-pill rf-value-insight">
             <div><strong>Direct Source Sensing</strong></div>
-            <div class="text-sm text-slate-600">Move beyond motion‑artifacts of SpO₂ and ECG. Our nanotechnology captures breathing directly at the source.</div>
+            <div class="text-sm text-slate-600">Move beyond motion‑artifacts of SpO₂ and ECG. Our sensor captures breathing directly at the source.</div>
           </div>
           <div class="rf-pill rf-value-insight">
             <div><strong>Predictive Recognition</strong></div>
