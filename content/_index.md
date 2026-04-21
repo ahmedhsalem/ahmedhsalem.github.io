@@ -11,8 +11,8 @@ sections:
   - block: hero
     id: top
     content:
-      title: "Respiratory Nanotechnology For Continuous Monitoring"
-      text: "RespiraFibre uses a 9‑micrometre nanotechnology sensor to add continuous breathing waveform monitoring to routine oxygen-delivery and respiratory interfaces, helping teams notice meaningful change sooner within existing workflows."
+      title: "Respiratory Continuous Monitoring"
+      text: "RespiraFibre uses a tiny sensor to add continuous breathing waveform monitoring to routine oxygen-delivery and respiratory interfaces, helping teams notice meaningful change sooner within existing workflows."
       primary_action:
         text: See how it works
         url: "#how-it-works"
@@ -94,12 +94,12 @@ sections:
     id: solution
     content:
       title: "Our Solution"
-      text: "Ultra-sensitive nanotechnology fibres embedded into oxygen-delivery devices for accurate, continuous respiratory monitoring."
+      text: "Ultra-sensitive sensors for accurate, continuous respiratory monitoring."
       items:
         - name: Imperceptible Sensors
           icon: heart
           description: |
-            Ultra-fine fibres (~1/10th the width of a hair) detect every breath without discomfort or workflow disruption.
+            Our sensors detect every breath without discomfort or workflow disruption.
         - name: Real-Time Data
           icon: wifi
           description: |
@@ -128,17 +128,17 @@ sections:
     id: how-it-works
     content:
       title: "How it works"
-      text: "A three-step nanotechnology and Edge‑to‑Cloud architecture designed for high‑stakes clinical monitoring."
+      text: "Seamless integration for patients and clinicians."
       items:
         - name: "1) Universal Interface Integration"
           icon: "link"
-          description: "Our humidity‑responsive fibre is pre‑integrated into standard nasal cannulas and masks. No new wearables, no skin‑perfusion issues—just seamless sensing within existing routine workflows."
+          description: "Our sensor does not add new wearables, and have no skin‑perfusion issues—just seamless sensing within existing routine workflows."
         - name: "2) Direct-Source Waveform Capture"
           icon: "signal"
-          description: "By sensing directly at the nose and mouth, we eliminate the motion noise that plagues SpO₂‑derived monitoring. The result is a clean, motion‑tolerant respiratory waveform with a high signal‑to‑noise ratio."
-        - name: "3) Edge-to-Cloud Intelligence"
+          description: "By sensing directly, we eliminate the motion noise that plagues SpO₂‑derived monitoring. The result is a clean, motion‑tolerant respiratory waveform with a high signal‑to‑noise ratio."
+        - name: "3) Clinician Alerts"
           icon: "chart-bar"
-          description: "Real‑time data is processed through our Edge+Cloud architecture, applying predictive analytics to surface pattern changes and alerting staff via a centralized UI before clinical deterioration escalates."
+          description: "Real‑time data is processed to alert staff to deterioration."
     design:
       css_class: "rf-section"
 
