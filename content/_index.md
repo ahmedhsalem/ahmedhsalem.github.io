@@ -17,9 +17,6 @@ sections:
         text: See how it works
         url: "#how-it-works"
         icon: chart-bar
-      secondary_action:
-        text: Talk to the team
-        url: "/contact"
     design:
       css_class: "rf-hero-bg dark rf-section"
       spacing:
