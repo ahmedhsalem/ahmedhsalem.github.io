@@ -8,8 +8,4 @@ toc: false
 
 # Get in touch
 
-We’d love to hear from you. You can also email directly at:
-
-**Email:** [zcemasa@ucl.ac.uk](mailto:zcemasa@ucl.ac.uk)
-
 ---
