@@ -12,7 +12,7 @@ sections:
     id: top
     content:
       title: "Respiratory Continuous Monitoring"
-      text: "RespiraFibre uses a tiny sensor to add continuous breathing waveform monitoring to routine oxygen-delivery and respiratory interfaces, helping teams notice meaningful change sooner within existing workflows."
+      text: "RespiraFibre uses a tiny sensor to add continuous breathing waveform monitoring helping teams notice meaningful change sooner within existing workflows."
       primary_action:
         text: See how it works
         url: "#how-it-works"
