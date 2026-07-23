@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#f6f9f9;font-family:'Public Sans',system-ui,sans-serif;color:#0e2f38;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Schibsted Grotesk',system-ui,sans-serif;margin:0;letter-spacing:-.02em}
+  p{margin:0}
+  a{color:#0e6a78;text-decoration:none}
+  a:hover{color:#17808f}
+  input,textarea,select{font-family:'Public Sans',system-ui,sans-serif}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:#0e6a78 !important;box-shadow:0 0 0 3px rgba(14,106,120,.12)}
+  @keyframes waveScroll{from{transform:translateX(0)}to{transform:translateX(-800px)}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail" data-bg-color="#0e2f38">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0e2f38"></rect>
+    <path d="M0 300 L200 300 L250 200 L300 400 L360 260 L420 300 L1200 300" fill="none" stroke="#3fb6c4" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" opacity="0.5"></path>
+    <rect x="360" y="360" width="480" height="300" rx="24" fill="#ffffff"></rect>
+    <rect x="410" y="420" width="380" height="26" rx="8" fill="#d6e0e1"></rect>
+    <rect x="410" y="470" width="380" height="26" rx="8" fill="#d6e0e1"></rect>
+    <rect x="410" y="560" width="180" height="48" rx="12" fill="#e9885a"></rect>
+    <text x="600" y="200" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#eef6f7" text-anchor="middle">Contact RespiraFibre</text>
+  </svg>
+</template>
+
+<div style="overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(246,249,249,.82);backdrop-filter:blur(12px);border-bottom:1px solid #e4ebeb">
+  <nav style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 32px">
+    <a href="RespiraFibre.dc.html" style="display:flex;align-items:center;gap:11px;color:#0e2f38">
+      <img src="uploads/RespiraFibre_logo_pink.svg" alt="RespiraFibre" style="height:44px;width:auto;display:block">
+    </a>
+    <a href="RespiraFibre.dc.html" style="font-size:15px;font-weight:600;color:#3c4c4f">← Back to site</a>
+  </nav>
+</header>
+
+<section style="position:relative;overflow:hidden;background:#0e2f38">
+  <div style="position:absolute;left:0;right:0;top:20%;height:280px;overflow:hidden;opacity:.14;pointer-events:none">
+    <div style="display:flex;width:3200px;animation:waveScroll 18s linear infinite">
+      <svg width="800" height="120" viewBox="0 0 800 120" preserveAspectRatio="none" style="width:800px;height:280px" fill="none"><path d="M0.0,94.7 L3.4,95.4 L6.9,88.1 L10.4,72.9 L14.1,58.8 L17.7,48.1 L21.4,40.6 L25.0,52.1 L28.7,72.3 L32.3,81.5 L35.9,88.1 L39.5,88.9 L43.2,92.2 L46.8,93.1 L50.2,95.4 L53.8,78.3 L57.3,82.3 L60.8,87.3 L64.4,80.4 L67.6,66.4 L71.3,54.2 L74.8,45.0 L78.1,41.7 L81.8,72.0 L85.5,84.9 L89.1,91.7 L92.7,96.7 L96.1,99.2 L99.9,97.9 L103.6,94.3 L107.1,78.6 L110.7,62.3 L114.1,50.4 L117.6,42.9 L121.0,55.5 L124.4,79.6 L128.0,92.3 L131.4,98.5 L134.8,100.7 L138.5,101.9 L141.9,99.4 L145.4,85.9 L148.9,69.0 L152.7,54.8 L156.2,44.8 L159.8,38.5 L163.4,48.1 L166.9,74.1 L170.4,86.0 L174.3,93.9 L177.6,100.0 L181.1,102.4 L184.7,99.9 L188.1,83.6 L191.8,65.5 L195.3,50.4 L198.7,38.3 L202.0,29.5 L205.6,23.4 L208.9,18.6 L212.1,14.6 L215.4,35.0 L219.1,51.9 L222.8,63.4 L226.2,69.3 L229.4,75.2 L232.8,79.5 L236.2,82.8 L239.9,85.0 L243.5,86.2 L247.2,82.2 L250.5,68.8 L254.1,57.8 L257.8,47.7 L261.4,39.2 L264.9,31.9 L268.8,26.5 L272.3,22.3 L275.8,19.1 L279.5,18.5 L282.9,40.5 L286.6,58.2 L289.8,65.5 L293.3,71.0 L296.7,77.6 L300.1,81.3 L303.6,85.7 L307.1,86.8 L310.7,72.0 L314.2,50.3 L317.6,34.0 L321.0,24.8 L324.4,20.1 L328.0,24.5 L331.7,58.5 L335.5,72.3 L338.9,82.6 L342.1,90.0 L345.6,94.0 L349.0,94.6 L352.4,78.3 L355.8,59.5 L359.2,43.9 L362.6,32.6 L365.8,26.1 L369.1,44.5 L372.7,71.4 L376.2,80.4 L379.9,89.8 L383.2,95.0 L386.5,96.2 L390.0,95.3 L393.3,96.6 L396.8,98.9 L400.3,96.8 L403.7,82.8 L407.2,67.7 L410.6,55.7 L414.5,46.2 L418.1,38.4 L421.6,32.4 L425.0,27.3 L428.8,35.4 L432.3,61.5 L435.8,74.0 L439.6,83.1 L443.0,87.4 L446.3,91.2 L449.9,95.1 L453.4,96.9 L457.0,96.2 L460.7,93.7 L464.2,71.2 L467.7,50.4 L471.2,36.2 L474.5,28.3 L477.9,56.2 L480.9,75.8 L484.3,85.9 L487.7,92.5 L491.3,98.1 L494.8,100.1 L498.1,86.1 L501.6,65.8 L505.2,48.9 L508.6,37.9 L512.1,30.7 L516.0,61.4 L519.7,77.4 L523.1,90.2 L526.5,97.7 L530.0,102.1 L533.4,105.7 L537.0,104.8 L540.6,90.0 L543.9,70.4 L547.6,52.5 L551.0,41.1 L554.6,37.9 L558.5,74.2 L562.0,89.6 L565.3,97.7 L569.1,103.9 L572.6,98.9 L575.2,77.8 L577.1,53.8 L579.2,41.1 L581.3,31.5 L583.3,52.7 L585.2,74.6 L587.2,85.4 L589.3,93.1 L591.2,97.7 L593.3,99.8 L595.3,94.8 L597.4,69.9 L599.4,51.5 L601.3,38.4 L603.4,30.0 L605.4,62.3 L607.3,78.8 L609.4,88.8 L611.4,95.0 L613.3,98.2 L615.4,92.7 L617.4,66.0 L619.5,45.8 L621.4,33.0 L623.6,23.9 L625.6,56.8 L627.9,74.6 L629.9,84.1 L632.0,90.1 L635.7,93.5 L639.4,88.5 L643.1,66.5 L646.9,46.7 L651.0,34.8 L654.4,25.4 L657.9,49.1 L660.9,70.1 L664.0,79.9 L667.1,87.0 L670.3,90.7 L673.5,87.3 L677.0,68.1 L680.1,51.1 L683.4,39.3 L686.5,29.6 L689.9,22.3 L692.9,56.2 L696.4,73.0 L699.9,83.6 L703.2,90.1 L706.2,93.2 L709.9,95.8 L713.5,85.7 L717.1,64.2 L719.9,44.3 L721.8,26.9 L723.8,20.2 L725.9,55.0 L727.9,71.1 L730.1,79.6 L732.2,88.2 L734.1,91.9 L736.1,93.9 L738.1,72.0 L740.2,52.2 L742.1,37.3 L744.3,26.1 L746.3,49.8 L748.7,69.7 L750.7,81.8 L752.7,88.9 L754.7,94.9 L756.8,77.3 L759.1,56.4 L763.0,39.4 L766.6,27.3 L770.6,18.4 L774.7,43.1 L778.3,64.3 L781.9,76.6 L785.5,83.7 L789.2,87.1 L792.9,83.1 L796.7,61.5 L800.0,94.7" stroke="#17808f" stroke-width="2"></path></svg>
+      <svg width="800" height="120" viewBox="0 0 800 120" preserveAspectRatio="none" style="width:800px;height:280px" fill="none"><path d="M0.0,94.7 L3.4,95.4 L6.9,88.1 L10.4,72.9 L14.1,58.8 L17.7,48.1 L21.4,40.6 L25.0,52.1 L28.7,72.3 L32.3,81.5 L35.9,88.1 L39.5,88.9 L43.2,92.2 L46.8,93.1 L50.2,95.4 L53.8,78.3 L57.3,82.3 L60.8,87.3 L64.4,80.4 L67.6,66.4 L71.3,54.2 L74.8,45.0 L78.1,41.7 L81.8,72.0 L85.5,84.9 L89.1,91.7 L92.7,96.7 L96.1,99.2 L99.9,97.9 L103.6,94.3 L107.1,78.6 L110.7,62.3 L114.1,50.4 L117.6,42.9 L121.0,55.5 L124.4,79.6 L128.0,92.3 L131.4,98.5 L134.8,100.7 L138.5,101.9 L141.9,99.4 L145.4,85.9 L148.9,69.0 L152.7,54.8 L156.2,44.8 L159.8,38.5 L163.4,48.1 L166.9,74.1 L170.4,86.0 L174.3,93.9 L177.6,100.0 L181.1,102.4 L184.7,99.9 L188.1,83.6 L191.8,65.5 L195.3,50.4 L198.7,38.3 L202.0,29.5 L205.6,23.4 L208.9,18.6 L212.1,14.6 L215.4,35.0 L219.1,51.9 L222.8,63.4 L226.2,69.3 L229.4,75.2 L232.8,79.5 L236.2,82.8 L239.9,85.0 L243.5,86.2 L247.2,82.2 L250.5,68.8 L254.1,57.8 L257.8,47.7 L261.4,39.2 L264.9,31.9 L268.8,26.5 L272.3,22.3 L275.8,19.1 L279.5,18.5 L282.9,40.5 L286.6,58.2 L289.8,65.5 L293.3,71.0 L296.7,77.6 L300.1,81.3 L303.6,85.7 L307.1,86.8 L310.7,72.0 L314.2,50.3 L317.6,34.0 L321.0,24.8 L324.4,20.1 L328.0,24.5 L331.7,58.5 L335.5,72.3 L338.9,82.6 L342.1,90.0 L345.6,94.0 L349.0,94.6 L352.4,78.3 L355.8,59.5 L359.2,43.9 L362.6,32.6 L365.8,26.1 L369.1,44.5 L372.7,71.4 L376.2,80.4 L379.9,89.8 L383.2,95.0 L386.5,96.2 L390.0,95.3 L393.3,96.6 L396.8,98.9 L400.3,96.8 L403.7,82.8 L407.2,67.7 L410.6,55.7 L414.5,46.2 L418.1,38.4 L421.6,32.4 L425.0,27.3 L428.8,35.4 L432.3,61.5 L435.8,74.0 L439.6,83.1 L443.0,87.4 L446.3,91.2 L449.9,95.1 L453.4,96.9 L457.0,96.2 L460.7,93.7 L464.2,71.2 L467.7,50.4 L471.2,36.2 L474.5,28.3 L477.9,56.2 L480.9,75.8 L484.3,85.9 L487.7,92.5 L491.3,98.1 L494.8,100.1 L498.1,86.1 L501.6,65.8 L505.2,48.9 L508.6,37.9 L512.1,30.7 L516.0,61.4 L519.7,77.4 L523.1,90.2 L526.5,97.7 L530.0,102.1 L533.4,105.7 L537.0,104.8 L540.6,90.0 L543.9,70.4 L547.6,52.5 L551.0,41.1 L554.6,37.9 L558.5,74.2 L562.0,89.6 L565.3,97.7 L569.1,103.9 L572.6,98.9 L575.2,77.8 L577.1,53.8 L579.2,41.1 L581.3,31.5 L583.3,52.7 L585.2,74.6 L587.2,85.4 L589.3,93.1 L591.2,97.7 L593.3,99.8 L595.3,94.8 L597.4,69.9 L599.4,51.5 L601.3,38.4 L603.4,30.0 L605.4,62.3 L607.3,78.8 L609.4,88.8 L611.4,95.0 L613.3,98.2 L615.4,92.7 L617.4,66.0 L619.5,45.8 L621.4,33.0 L623.6,23.9 L625.6,56.8 L627.9,74.6 L629.9,84.1 L632.0,90.1 L635.7,93.5 L639.4,88.5 L643.1,66.5 L646.9,46.7 L651.0,34.8 L654.4,25.4 L657.9,49.1 L660.9,70.1 L664.0,79.9 L667.1,87.0 L670.3,90.7 L673.5,87.3 L677.0,68.1 L680.1,51.1 L683.4,39.3 L686.5,29.6 L689.9,22.3 L692.9,56.2 L696.4,73.0 L699.9,83.6 L703.2,90.1 L706.2,93.2 L709.9,95.8 L713.5,85.7 L717.1,64.2 L719.9,44.3 L721.8,26.9 L723.8,20.2 L725.9,55.0 L727.9,71.1 L730.1,79.6 L732.2,88.2 L734.1,91.9 L736.1,93.9 L738.1,72.0 L740.2,52.2 L742.1,37.3 L744.3,26.1 L746.3,49.8 L748.7,69.7 L750.7,81.8 L752.7,88.9 L754.7,94.9 L756.8,77.3 L759.1,56.4 L763.0,39.4 L766.6,27.3 L770.6,18.4 L774.7,43.1 L778.3,64.3 L781.9,76.6 L785.5,83.7 L789.2,87.1 L792.9,83.1 L796.7,61.5 L800.0,94.7" stroke="#17808f" stroke-width="2"></path></svg>
+      <svg width="800" height="120" viewBox="0 0 800 120" preserveAspectRatio="none" style="width:800px;height:280px" fill="none"><path d="M0.0,94.7 L3.4,95.4 L6.9,88.1 L10.4,72.9 L14.1,58.8 L17.7,48.1 L21.4,40.6 L25.0,52.1 L28.7,72.3 L32.3,81.5 L35.9,88.1 L39.5,88.9 L43.2,92.2 L46.8,93.1 L50.2,95.4 L53.8,78.3 L57.3,82.3 L60.8,87.3 L64.4,80.4 L67.6,66.4 L71.3,54.2 L74.8,45.0 L78.1,41.7 L81.8,72.0 L85.5,84.9 L89.1,91.7 L92.7,96.7 L96.1,99.2 L99.9,97.9 L103.6,94.3 L107.1,78.6 L110.7,62.3 L114.1,50.4 L117.6,42.9 L121.0,55.5 L124.4,79.6 L128.0,92.3 L131.4,98.5 L134.8,100.7 L138.5,101.9 L141.9,99.4 L145.4,85.9 L148.9,69.0 L152.7,54.8 L156.2,44.8 L159.8,38.5 L163.4,48.1 L166.9,74.1 L170.4,86.0 L174.3,93.9 L177.6,100.0 L181.1,102.4 L184.7,99.9 L188.1,83.6 L191.8,65.5 L195.3,50.4 L198.7,38.3 L202.0,29.5 L205.6,23.4 L208.9,18.6 L212.1,14.6 L215.4,35.0 L219.1,51.9 L222.8,63.4 L226.2,69.3 L229.4,75.2 L232.8,79.5 L236.2,82.8 L239.9,85.0 L243.5,86.2 L247.2,82.2 L250.5,68.8 L254.1,57.8 L257.8,47.7 L261.4,39.2 L264.9,31.9 L268.8,26.5 L272.3,22.3 L275.8,19.1 L279.5,18.5 L282.9,40.5 L286.6,58.2 L289.8,65.5 L293.3,71.0 L296.7,77.6 L300.1,81.3 L303.6,85.7 L307.1,86.8 L310.7,72.0 L314.2,50.3 L317.6,34.0 L321.0,24.8 L324.4,20.1 L328.0,24.5 L331.7,58.5 L335.5,72.3 L338.9,82.6 L342.1,90.0 L345.6,94.0 L349.0,94.6 L352.4,78.3 L355.8,59.5 L359.2,43.9 L362.6,32.6 L365.8,26.1 L369.1,44.5 L372.7,71.4 L376.2,80.4 L379.9,89.8 L383.2,95.0 L386.5,96.2 L390.0,95.3 L393.3,96.6 L396.8,98.9 L400.3,96.8 L403.7,82.8 L407.2,67.7 L410.6,55.7 L414.5,46.2 L418.1,38.4 L421.6,32.4 L425.0,27.3 L428.8,35.4 L432.3,61.5 L435.8,74.0 L439.6,83.1 L443.0,87.4 L446.3,91.2 L449.9,95.1 L453.4,96.9 L457.0,96.2 L460.7,93.7 L464.2,71.2 L467.7,50.4 L471.2,36.2 L474.5,28.3 L477.9,56.2 L480.9,75.8 L484.3,85.9 L487.7,92.5 L491.3,98.1 L494.8,100.1 L498.1,86.1 L501.6,65.8 L505.2,48.9 L508.6,37.9 L512.1,30.7 L516.0,61.4 L519.7,77.4 L523.1,90.2 L526.5,97.7 L530.0,102.1 L533.4,105.7 L537.0,104.8 L540.6,90.0 L543.9,70.4 L547.6,52.5 L551.0,41.1 L554.6,37.9 L558.5,74.2 L562.0,89.6 L565.3,97.7 L569.1,103.9 L572.6,98.9 L575.2,77.8 L577.1,53.8 L579.2,41.1 L581.3,31.5 L583.3,52.7 L585.2,74.6 L587.2,85.4 L589.3,93.1 L591.2,97.7 L593.3,99.8 L595.3,94.8 L597.4,69.9 L599.4,51.5 L601.3,38.4 L603.4,30.0 L605.4,62.3 L607.3,78.8 L609.4,88.8 L611.4,95.0 L613.3,98.2 L615.4,92.7 L617.4,66.0 L619.5,45.8 L621.4,33.0 L623.6,23.9 L625.6,56.8 L627.9,74.6 L629.9,84.1 L632.0,90.1 L635.7,93.5 L639.4,88.5 L643.1,66.5 L646.9,46.7 L651.0,34.8 L654.4,25.4 L657.9,49.1 L660.9,70.1 L664.0,79.9 L667.1,87.0 L670.3,90.7 L673.5,87.3 L677.0,68.1 L680.1,51.1 L683.4,39.3 L686.5,29.6 L689.9,22.3 L692.9,56.2 L696.4,73.0 L699.9,83.6 L703.2,90.1 L706.2,93.2 L709.9,95.8 L713.5,85.7 L717.1,64.2 L719.9,44.3 L721.8,26.9 L723.8,20.2 L725.9,55.0 L727.9,71.1 L730.1,79.6 L732.2,88.2 L734.1,91.9 L736.1,93.9 L738.1,72.0 L740.2,52.2 L742.1,37.3 L744.3,26.1 L746.3,49.8 L748.7,69.7 L750.7,81.8 L752.7,88.9 L754.7,94.9 L756.8,77.3 L759.1,56.4 L763.0,39.4 L766.6,27.3 L770.6,18.4 L774.7,43.1 L778.3,64.3 L781.9,76.6 L785.5,83.7 L789.2,87.1 L792.9,83.1 L796.7,61.5 L800.0,94.7" stroke="#17808f" stroke-width="2"></path></svg>
+      <svg width="800" height="120" viewBox="0 0 800 120" preserveAspectRatio="none" style="width:800px;height:280px" fill="none"><path d="M0.0,94.7 L3.4,95.4 L6.9,88.1 L10.4,72.9 L14.1,58.8 L17.7,48.1 L21.4,40.6 L25.0,52.1 L28.7,72.3 L32.3,81.5 L35.9,88.1 L39.5,88.9 L43.2,92.2 L46.8,93.1 L50.2,95.4 L53.8,78.3 L57.3,82.3 L60.8,87.3 L64.4,80.4 L67.6,66.4 L71.3,54.2 L74.8,45.0 L78.1,41.7 L81.8,72.0 L85.5,84.9 L89.1,91.7 L92.7,96.7 L96.1,99.2 L99.9,97.9 L103.6,94.3 L107.1,78.6 L110.7,62.3 L114.1,50.4 L117.6,42.9 L121.0,55.5 L124.4,79.6 L128.0,92.3 L131.4,98.5 L134.8,100.7 L138.5,101.9 L141.9,99.4 L145.4,85.9 L148.9,69.0 L152.7,54.8 L156.2,44.8 L159.8,38.5 L163.4,48.1 L166.9,74.1 L170.4,86.0 L174.3,93.9 L177.6,100.0 L181.1,102.4 L184.7,99.9 L188.1,83.6 L191.8,65.5 L195.3,50.4 L198.7,38.3 L202.0,29.5 L205.6,23.4 L208.9,18.6 L212.1,14.6 L215.4,35.0 L219.1,51.9 L222.8,63.4 L226.2,69.3 L229.4,75.2 L232.8,79.5 L236.2,82.8 L239.9,85.0 L243.5,86.2 L247.2,82.2 L250.5,68.8 L254.1,57.8 L257.8,47.7 L261.4,39.2 L264.9,31.9 L268.8,26.5 L272.3,22.3 L275.8,19.1 L279.5,18.5 L282.9,40.5 L286.6,58.2 L289.8,65.5 L293.3,71.0 L296.7,77.6 L300.1,81.3 L303.6,85.7 L307.1,86.8 L310.7,72.0 L314.2,50.3 L317.6,34.0 L321.0,24.8 L324.4,20.1 L328.0,24.5 L331.7,58.5 L335.5,72.3 L338.9,82.6 L342.1,90.0 L345.6,94.0 L349.0,94.6 L352.4,78.3 L355.8,59.5 L359.2,43.9 L362.6,32.6 L365.8,26.1 L369.1,44.5 L372.7,71.4 L376.2,80.4 L379.9,89.8 L383.2,95.0 L386.5,96.2 L390.0,95.3 L393.3,96.6 L396.8,98.9 L400.3,96.8 L403.7,82.8 L407.2,67.7 L410.6,55.7 L414.5,46.2 L418.1,38.4 L421.6,32.4 L425.0,27.3 L428.8,35.4 L432.3,61.5 L435.8,74.0 L439.6,83.1 L443.0,87.4 L446.3,91.2 L449.9,95.1 L453.4,96.9 L457.0,96.2 L460.7,93.7 L464.2,71.2 L467.7,50.4 L471.2,36.2 L474.5,28.3 L477.9,56.2 L480.9,75.8 L484.3,85.9 L487.7,92.5 L491.3,98.1 L494.8,100.1 L498.1,86.1 L501.6,65.8 L505.2,48.9 L508.6,37.9 L512.1,30.7 L516.0,61.4 L519.7,77.4 L523.1,90.2 L526.5,97.7 L530.0,102.1 L533.4,105.7 L537.0,104.8 L540.6,90.0 L543.9,70.4 L547.6,52.5 L551.0,41.1 L554.6,37.9 L558.5,74.2 L562.0,89.6 L565.3,97.7 L569.1,103.9 L572.6,98.9 L575.2,77.8 L577.1,53.8 L579.2,41.1 L581.3,31.5 L583.3,52.7 L585.2,74.6 L587.2,85.4 L589.3,93.1 L591.2,97.7 L593.3,99.8 L595.3,94.8 L597.4,69.9 L599.4,51.5 L601.3,38.4 L603.4,30.0 L605.4,62.3 L607.3,78.8 L609.4,88.8 L611.4,95.0 L613.3,98.2 L615.4,92.7 L617.4,66.0 L619.5,45.8 L621.4,33.0 L623.6,23.9 L625.6,56.8 L627.9,74.6 L629.9,84.1 L632.0,90.1 L635.7,93.5 L639.4,88.5 L643.1,66.5 L646.9,46.7 L651.0,34.8 L654.4,25.4 L657.9,49.1 L660.9,70.1 L664.0,79.9 L667.1,87.0 L670.3,90.7 L673.5,87.3 L677.0,68.1 L680.1,51.1 L683.4,39.3 L686.5,29.6 L689.9,22.3 L692.9,56.2 L696.4,73.0 L699.9,83.6 L703.2,90.1 L706.2,93.2 L709.9,95.8 L713.5,85.7 L717.1,64.2 L719.9,44.3 L721.8,26.9 L723.8,20.2 L725.9,55.0 L727.9,71.1 L730.1,79.6 L732.2,88.2 L734.1,91.9 L736.1,93.9 L738.1,72.0 L740.2,52.2 L742.1,37.3 L744.3,26.1 L746.3,49.8 L748.7,69.7 L750.7,81.8 L752.7,88.9 L754.7,94.9 L756.8,77.3 L759.1,56.4 L763.0,39.4 L766.6,27.3 L770.6,18.4 L774.7,43.1 L778.3,64.3 L781.9,76.6 L785.5,83.7 L789.2,87.1 L792.9,83.1 L796.7,61.5 L800.0,94.7" stroke="#17808f" stroke-width="2"></path></svg>
+    </div>
+  </div>
+  <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:72px 32px 60px;text-align:center">
+    <span style="display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#3fb6c4">Explore collaboration</span>
+    <h1 style="font-size:clamp(32px,4.4vw,52px);font-weight:700;color:#fff;line-height:1.05;max-width:720px;margin:16px auto 0;text-wrap:pretty">Let's start a conversation.</h1>
+    <p style="font-size:18px;color:#c3d4d6;margin:18px auto 0;max-width:560px;line-height:1.55;text-wrap:pretty">Tell us about your ward, your evaluation goals, or your investment interest. We reply to every message from a clinical or commercial lead.</p>
+  </div>
+</section>
+
+<main style="flex:1;max-width:1240px;margin:0 auto;width:100%;padding:56px 32px 80px;display:grid;grid-template-columns:1fr;gap:48px" data-grid="">
+
+  <div style="display:grid;grid-template-columns:1.4fr .9fr;gap:56px" data-cols="">
+
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#fff;border:1px solid #e4ebeb;border-radius:20px;padding:44px 40px;box-shadow:0 20px 50px -30px rgba(14,47,56,.35)">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e6f6f2;display:flex;align-items:center;justify-content:center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0e8a6f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        </div>
+        <h2 style="font-size:26px;font-weight:700;margin:22px 0 0;color:#0e2f38">Message sent.</h2>
+        <p style="font-size:16px;line-height:1.6;color:#46585b;margin:12px 0 0;text-wrap:pretty">Thanks for reaching out. Your message has landed in our inbox and a clinical or commercial lead will reply, usually within two working days. You can also email us anytime at <a href="mailto:{{ recipient }}">{{ recipient }}</a>.</p>
+        <button type="button" onClick="{{ reset }}" style="margin-top:26px;background:#0e2f38;color:#fff;font-weight:600;font-size:15px;padding:13px 24px;border:none;border-radius:12px;cursor:pointer">Send another message</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" style="background:#fff;border:1px solid #e4ebeb;border-radius:20px;padding:40px;box-shadow:0 20px 50px -30px rgba(14,47,56,.35);display:flex;flex-direction:column;gap:20px">
+        <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fdecec;border:1px solid #f4c9c9;color:#a13333;border-radius:11px;padding:13px 16px;font-size:14px;line-height:1.5">{{ error }}</div>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" data-form-row="">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#31474b">
+            Full name
+            <input name="name" type="text" required="" placeholder="Dr G House" style="padding:13px 15px;font-size:15px;color:#0e2f38;background:#f8fbfb;border:1px solid #d6e0e1;border-radius:11px">
+          </label>
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#31474b">
+            Work email
+            <input name="email" type="email" required="" placeholder="g.house@house.com" style="padding:13px 15px;font-size:15px;color:#0e2f38;background:#f8fbfb;border:1px solid #d6e0e1;border-radius:11px">
+          </label>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" data-form-row="">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#31474b">
+            Organisation
+            <input name="org" type="text" placeholder="NHS Trust, university, or firm" style="padding:13px 15px;font-size:15px;color:#0e2f38;background:#f8fbfb;border:1px solid #d6e0e1;border-radius:11px">
+          </label>
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#31474b">
+            I am reaching out as
+            <select name="role" style="padding:13px 15px;font-size:15px;color:#0e2f38;background:#f8fbfb;border:1px solid #d6e0e1;border-radius:11px">
+              <option>NHS clinical team</option>
+              <option>Procurement</option>
+              <option>Investor</option>
+              <option>Research partner</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#31474b">
+          How can we help?
+          <textarea name="message" required="" rows="6" placeholder="Tell us about your ward setting, evaluation goals, or the collaboration you have in mind." style="padding:13px 15px;font-size:15px;color:#0e2f38;background:#f8fbfb;border:1px solid #d6e0e1;border-radius:11px;resize:vertical;line-height:1.5"></textarea>
+        </label>
+        <button type="submit" disabled="{{ sending }}" style="align-self:flex-start;background:#e9885a;color:#20100a;font-weight:700;font-size:16px;padding:15px 30px;border:none;border-radius:12px;cursor:pointer;opacity:1">{{ sendLabel }}</button>
+        <p style="font-size:13px;color:#7c8f92;margin:0;line-height:1.5">Your message is sent straight to our inbox. We only use your details to reply.</p>
+      </form>
+    </sc-if>
+
+    <aside style="display:flex;flex-direction:column;gap:28px">
+      <div style="background:#fff;border:1px solid #e4ebeb;border-radius:18px;padding:28px">
+        <h3 style="font-size:18px;font-weight:700;color:#0e2f38">Email us directly</h3>
+        <a href="mailto:{{ recipient }}" style="display:inline-block;margin-top:10px;font-size:16px;font-weight:600">{{ recipient }}</a>
+        <p style="font-size:14.5px;color:#5a6c6f;margin:14px 0 0;line-height:1.55">Prefer your own email client? Write to us and a clinical or commercial lead will get back to you.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #e4ebeb;border-radius:18px;padding:28px">
+        <h3 style="font-size:18px;font-weight:700;color:#0e2f38">Where we are</h3>
+        <p style="font-size:14.5px;color:#5a6c6f;margin:12px 0 0;line-height:1.6">A UCL / UCLH spin-out<br>Based in London, United Kingdom</p>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:18px;padding-top:18px;border-top:1px solid #eef2f2">
+          <span style="font-size:13px;font-weight:600;color:#7c8f92">Typical reply time</span>
+          <span style="font-size:13px;font-weight:700;color:#0e8a6f">2 working days</span>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer style="background:#0e2f38">
+  <div style="max-width:1240px;margin:0 auto;padding:26px 32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;font-size:13.5px;color:#8fa4a7">
+    <span style="font-family:'Schibsted Grotesk';font-weight:700;color:#eef6f7;font-size:16px">RespiraFibre</span>
+    <span>© 2026 RespiraFibre</span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;},&quot;recipient&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;zcemasa@ucl.ac.uk&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, sending: false, error: "" };
+  get recipient(){ return this.props.recipient ?? "hello@respirafibre.com"; }
+  renderVals(){
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      sending: this.state.sending,
+      error: this.state.error,
+      hasError: !!this.state.error,
+      sendLabel: this.state.sending ? "Sending..." : "Send message",
+      recipient: this.recipient,
+      reset: () => this.setState({ sent: false, error: "" }),
+      submit: async (e) => {
+        e.preventDefault();
+        if (this.state.sending) return;
+        const f = e.target;
+        const g = (n) => (f.elements[n] ? String(f.elements[n].value || "").trim() : "");
+        const name = g("name"), email = g("email"), org = g("org"), role = g("role"), message = g("message");
+        this.setState({ sending: true, error: "" });
+        try {
+          const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(this.recipient)}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify({
+              _subject: `RespiraFibre enquiry from ${name || "website visitor"}${role ? " (" + role + ")" : ""}`,
+              _template: "table",
+              Name: name,
+              Email: email,
+              Organisation: org || "-",
+              "Reaching out as": role,
+              Message: message,
+            }),
+          });
+          if (!res.ok) throw new Error("bad status " + res.status);
+          this.setState({ sending: false, sent: true });
+        } catch (err) {
+          this.setState({ sending: false, error: "Something went wrong sending your message. Please email us directly at " + this.recipient + "." });
+        }
+      }
+    };
+  }
+  componentDidMount(){
+    const apply = () => {
+      const narrow = window.innerWidth < 860;
+      document.querySelectorAll('[data-cols]').forEach(el=>{ el.style.gridTemplateColumns = narrow ? '1fr' : '1.4fr .9fr'; });
+      document.querySelectorAll('[data-form-row]').forEach(el=>{ el.style.gridTemplateColumns = window.innerWidth < 560 ? '1fr' : '1fr 1fr'; });
+    };
+    apply();
+    this._onResize = apply;
+    window.addEventListener('resize', apply);
+  }
+  componentWillUnmount(){ if(this._onResize) window.removeEventListener('resize', this._onResize); }
+}
+</script>
+</body>
+</html>
