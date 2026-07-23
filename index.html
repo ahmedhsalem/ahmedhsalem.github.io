@@ -25,6 +25,42 @@
   @keyframes barB{0%,100%{height:18px}50%{height:8px}}
   @keyframes barC{0%,100%{height:12px}50%{height:20px}}
   @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media(max-width:768px){
+    nav{padding:12px 16px!important}
+    nav > div{gap:16px;flex-direction:column;width:100%}
+    nav > div > a{font-size:14px}
+    nav img{height:36px}
+    h1{font-size:clamp(28px,7vw,38px)!important;width:100%!important;height:auto!important}
+    p{max-width:100%!important}
+    section > div:first-of-type > div:nth-child(2){grid-template-columns:1fr!important;gap:24px!important;padding:40px 16px!important}
+    [style*="grid-template-columns:repeat"]{grid-template-columns:1fr!important}
+    [style*="grid-template-columns:1fr,1fr"]{grid-template-columns:1fr!important}
+    [style*="grid-template-columns:1fr,1fr,1fr"]{grid-template-columns:1fr!important}
+    [style*="display:grid;grid-template"]{grid-template-columns:1fr!important;gap:24px!important}
+    [style*="max-width:1240px"]{padding:32px 16px!important}
+    img[style*="width:"]{max-width:100%!important;height:auto!important}
+    [style*="position:absolute;right:-6px"]{position:static!important;width:100%!important;margin-top:20px!important}
+    [style*="min-width:360px"]{min-width:100%!important}
+    [style*="min-height:460px"]{min-height:auto!important}
+    [style*="gap:40px"]{gap:24px!important}
+    [style*="gap:30px"]{gap:16px!important}
+    [style*="padding:70px"]{padding:40px 16px!important}
+    [style*="font-size:17px"],[style*="font-size:20px"],[style*="font-size:18px"]{font-size:clamp(15px,4vw,18px)!important}
+    button,a[style*="background"],a[style*="padding:15px"]{width:100%;font-size:14px;padding:12px 16px!important}
+    [style*="display:flex;flex-wrap:wrap"]{flex-direction:column;gap:12px!important}
+    [style*="display:flex;align-items:center;gap:30px"]{flex-direction:column;gap:16px!important}
+    header{position:static!important}
+    [data-wave]{animation:none!important;opacity:.08!important}
+  }
+  @media(max-width:480px){
+    body{font-size:14px}
+    h1{font-size:clamp(24px,6vw,32px)!important}
+    [style*="padding:70px"]{padding:30px 12px!important}
+    [style*="max-width:1240px"]{padding:24px 12px!important}
+    nav{padding:10px 12px!important}
+    nav img{height:32px}
+    button,a[style*="background"],a[style*="padding:15px"]{padding:10px 14px!important;font-size:13px}
+  }
 </style>
 </helmet>
 
